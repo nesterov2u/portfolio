@@ -1,0 +1,38 @@
+[
+  {
+    "id": "featured-project",
+    "slug": "featured-project",
+    "featured": true,
+    "category": "interfaces",
+    "year": "2025",
+    "title": {
+      "ru": "Название проекта",
+      "en": "Project Title"
+    },
+    "summary": {
+      "ru": "Развитие продукта с фокусом на структуру, удобство и визуальную целостность.",
+      "en": "A product evolution project focused on structure, usability, and visual consistency."
+    },
+    "problem": {
+      "ru": "Задача состояла в том, чтобы пересобрать пользовательский сценарий, упростить структуру и сделать продукт более понятным для пользователей и команды.",
+      "en": "The challenge was to rethink the core user flow, simplify the structure, and make the product clearer for both users and the team."
+    },
+    "role": {
+      "ru": "Product Designer / Lead Designer",
+      "en": "Product Designer / Lead Designer"
+    },
+    "approach": {
+      "ru": "Я переработал ключевые сценарии, задал визуальные принципы и довел решение до состояния, пригодного для системной работы и реализации.",
+      "en": "I redesigned the key flows, established visual principles, and brought the solution to a state that was ready for systematic team use and implementation."
+    },
+    "outcome": {
+      "ru": "В результате продукт стал понятнее, цельнее и удобнее в использовании, а команда получила более ясную основу для дальнейшего развития.",
+      "en": "As a result, the product became clearer, more cohesive, and easier to use, while the team gained a stronger foundation for future development."
+    },
+    "cover": "/assets/cases/featured-project/cover.jpg",
+    "gallery": [
+      "/assets/cases/featured-project/01.jpg",
+      "/assets/cases/featured-project/02.jpg"
+    ]
+  }
+]

@@ -1,0 +1,175 @@
+{
+  "hero": {
+    "eyebrow": {
+      "ru": "Product Designer with multidisciplinary background",
+      "en": "Product Designer with multidisciplinary background"
+    },
+    "title": {
+      "ru": "Проектирую цифровые продукты и визуальные системы, которые помогают бизнесу расти.",
+      "en": "I design digital products and visual systems that help businesses grow."
+    },
+    "text": {
+      "ru": "15+ лет в дизайне, из них 5 лет в роли Lead Designer в международной IT-компании. Работаю на стыке интерфейсов, брендинга, иллюстрации, упаковки и motion/video.",
+      "en": "15+ years in design, including 5 years as a Lead Designer in an international IT company. My background spans interfaces, branding, illustration, packaging, and motion/video."
+    },
+    "actions": [
+      { "id": "viewWork", "href": "#work", "style": "primary" },
+      { "id": "contact", "href": "#contact", "style": "secondary" }
+    ],
+    "proofPoints": [
+      {
+        "id": "years",
+        "ru": "15+ лет в дизайне",
+        "en": "15+ years in design"
+      },
+      {
+        "id": "lead",
+        "ru": "5 лет в lead-роли",
+        "en": "5 years in lead roles"
+      },
+      {
+        "id": "intl",
+        "ru": "International IT experience",
+        "en": "International IT experience"
+      },
+      {
+        "id": "range",
+        "ru": "Interfaces, branding, illustration, packaging, motion",
+        "en": "Interfaces, branding, illustration, packaging, motion"
+      }
+    ]
+  },
+  "experienceSnapshot": {
+    "title": {
+      "ru": "Кратко обо мне",
+      "en": "Experience Snapshot"
+    },
+    "intro": {
+      "ru": "Я работаю на пересечении продуктового мышления, визуальной системы и коммуникации. Умею вести дизайн от идеи до запуска, сохраняя ясность, качество и цельность решения.",
+      "en": "I work at the intersection of product thinking, visual systems, and communication. I can lead design from concept to launch while keeping solutions clear, consistent, and effective."
+    },
+    "items": [
+      {
+        "id": "product-thinking",
+        "title": {
+          "ru": "Product Thinking",
+          "en": "Product Thinking"
+        },
+        "text": {
+          "ru": "Проектирую интерфейсы с учетом пользовательских сценариев, бизнес-целей и ограничений продукта.",
+          "en": "I design interfaces around user flows, business goals, and real product constraints."
+        }
+      },
+      {
+        "id": "design-leadership",
+        "title": {
+          "ru": "Design Leadership",
+          "en": "Design Leadership"
+        },
+        "text": {
+          "ru": "Есть опыт lead-роли, систематизации процессов и принятия дизайн-решений в команде.",
+          "en": "I have experience in lead roles, design decision-making, and improving quality within teams."
+        }
+      },
+      {
+        "id": "cross-disciplinary-range",
+        "title": {
+          "ru": "Cross-Disciplinary Range",
+          "en": "Cross-Disciplinary Range"
+        },
+        "text": {
+          "ru": "Уверенно работаю с digital-интерфейсами, брендингом, иллюстрацией, упаковкой и motion.",
+          "en": "I work confidently across digital interfaces, branding, illustration, packaging, and motion."
+        }
+      },
+      {
+        "id": "delivery-focus",
+        "title": {
+          "ru": "Delivery Focus",
+          "en": "Delivery Focus"
+        },
+        "text": {
+          "ru": "Ориентируюсь не только на визуальное качество, но и на результат, ясность и реализуемость.",
+          "en": "I care not only about aesthetics, but also about outcomes, clarity, and feasibility."
+        }
+      }
+    ]
+  },
+  "featuredCase": {
+    "caseId": "featured-project"
+  },
+  "categoryNavigator": {
+    "title": {
+      "ru": "Направления",
+      "en": "Categories"
+    },
+    "intro": {
+      "ru": "Помимо продуктовых интерфейсов, я работаю с визуальными системами и коммуникацией в разных форматах.",
+      "en": "Alongside product interfaces, I work with visual systems and communication across different formats."
+    },
+    "categoryIds": [
+      "interfaces",
+      "branding",
+      "illustration",
+      "packaging",
+      "motion"
+    ]
+  },
+  "profile": {
+    "title": {
+      "ru": "Профиль",
+      "en": "Profile"
+    },
+    "paragraphs": [
+      {
+        "ru": "Я дизайнер с широким визуальным и продуктовым бэкграундом. Мне интересно создавать решения, которые одновременно сильны по структуре, смыслу и визуальному исполнению.",
+        "en": "I am a designer with a broad visual and product background. I am most interested in building solutions that are strong in structure, meaning, and execution."
+      },
+      {
+        "ru": "Особенно ценю задачи, где нужно соединить пользовательский опыт, системность и зрелый визуальный язык.",
+        "en": "I especially value work where user experience, systems thinking, and a mature visual language need to come together."
+      },
+      {
+        "ru": "Открыт к product design и lead design ролям, где важны качество, ответственность и сотрудничество с командой.",
+        "en": "I am open to product design and lead design roles where quality, ownership, and collaboration matter."
+      }
+    ],
+    "principles": [
+      {
+        "id": "clarity",
+        "ru": "Ясность важнее шума",
+        "en": "Clarity over noise"
+      },
+      {
+        "id": "systems",
+        "ru": "Система важнее случайных решений",
+        "en": "Systems over random decisions"
+      },
+      {
+        "id": "detail",
+        "ru": "Деталь важна, если она усиливает смысл",
+        "en": "Detail matters when it strengthens meaning"
+      }
+    ]
+  },
+  "contact": {
+    "title": {
+      "ru": "Контакт",
+      "en": "Contact"
+    },
+    "text": {
+      "ru": "Если вам нужен Product Designer с сильной визуальной базой и опытом lead-роли, буду рад обсудить возможность сотрудничества.",
+      "en": "If you are looking for a Product Designer with a strong visual foundation and lead-level experience, I’d be glad to discuss potential collaboration."
+    },
+    "cta": {
+      "id": "contactMe",
+      "href": "mailto:hello@example.com"
+    },
+    "links": [
+      { "id": "email", "label": "Email", "href": "mailto:hello@example.com" },
+      { "id": "telegram", "label": "Telegram", "href": "https://t.me/username" },
+      { "id": "linkedin", "label": "LinkedIn", "href": "https://linkedin.com/in/username" },
+      { "id": "behance", "label": "Behance", "href": "https://behance.net/username" }
+    ]
+  }
+}

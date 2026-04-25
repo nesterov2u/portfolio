@@ -1,0 +1,62 @@
+[
+  {
+    "id": "interfaces",
+    "slug": "interfaces",
+    "title": {
+      "ru": "Interfaces",
+      "en": "Interfaces"
+    },
+    "summary": {
+      "ru": "Продуктовые интерфейсы с фокусом на сценарии, структуру и ясность взаимодействия.",
+      "en": "Product interfaces focused on user flow clarity, structure, and ease of use."
+    }
+  },
+  {
+    "id": "branding",
+    "slug": "branding",
+    "title": {
+      "ru": "Branding",
+      "en": "Branding"
+    },
+    "summary": {
+      "ru": "Айдентика и визуальные системы, которые делают бренд цельным и узнаваемым.",
+      "en": "Identity systems that make brands more cohesive, recognisable, and clear."
+    }
+  },
+  {
+    "id": "illustration",
+    "slug": "illustration",
+    "title": {
+      "ru": "Illustration",
+      "en": "Illustration"
+    },
+    "summary": {
+      "ru": "Иллюстративные решения, поддерживающие характер продукта и коммуникацию.",
+      "en": "Illustration work that supports product character and communication."
+    }
+  },
+  {
+    "id": "packaging",
+    "slug": "packaging",
+    "title": {
+      "ru": "Packaging",
+      "en": "Packaging"
+    },
+    "summary": {
+      "ru": "Упаковка с акцентом на простоту, визуальную логику и узнаваемость.",
+      "en": "Packaging solutions focused on simplicity, visual logic, and recognition."
+    }
+  },
+  {
+    "id": "motion",
+    "slug": "motion",
+    "title": {
+      "ru": "Motion / Video",
+      "en": "Motion / Video"
+    },
+    "summary": {
+      "ru": "Motion-материалы для презентации продукта, бренда или ключевого сообщения.",
+      "en": "Motion work created to present a product, a brand, or a key message more effectively."
+    }
+  }
+]

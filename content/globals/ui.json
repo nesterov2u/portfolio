@@ -1,0 +1,32 @@
+{
+  "labels": {
+    "work": {
+      "ru": "Кейсы",
+      "en": "Work"
+    },
+    "profile": {
+      "ru": "Профиль",
+      "en": "Profile"
+    },
+    "contact": {
+      "ru": "Контакты",
+      "en": "Contact"
+    },
+    "getInTouch": {
+      "ru": "Связаться",
+      "en": "Get in touch"
+    },
+    "viewWork": {
+      "ru": "Смотреть кейсы",
+      "en": "View work"
+    },
+    "contactMe": {
+      "ru": "Написать",
+      "en": "Contact me"
+    },
+    "openCase": {
+      "ru": "Открыть кейс",
+      "en": "Open case"
+    }
+  }
+}
