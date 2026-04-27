@@ -5,45 +5,49 @@
       "en": "Product Designer with multidisciplinary background"
     },
     "title": {
-      "ru": "Визуальные решения, в которых есть ясность, характер и система.",
+      "ru": "Визуальные решения, в которых есть ясность, характер и система. Тест",
       "en": "I help shape products and visual systems with clarity, character, and structure."
     },
     "text": {
-      "ru": "Я Product Designer с 15+ годами опыта в дизайне. Последние 5 лет работал Lead Designer в международной IT-компании. Мой опыт включает интерфейсы, брендинг, иллюстрацию, упаковку и motion/video.",
+      "ru": "Я Product Designer с 15+ годами опыта в дизайне. Последние 5 лет работал Lead Designer в международной IT-компании. Мой опыт включает интерфейсы, брендинг, иллюстрацию, упаковку и motion/video. Тест",
       "en": "I am a Product Designer with 15+ years in design, including 5 years as a Lead Designer in an international IT company. My background spans interfaces, branding, illustration, packaging, and motion/video."
     },
     "visual": "assets/hero/hero-visual.svg",
     "actions": [
-      { "id": "viewWork", "href": "#portfolio", "style": "primary" },
-      { "id": "contactMe", "href": "#contact", "style": "secondary" }
+      {
+        "id": "viewWork",
+        "href": "#portfolio",
+        "style": "primary"
+      },
+      {
+        "id": "contactMe",
+        "href": "#contact",
+        "style": "secondary"
+      }
     ]
   },
   "proof_points": [
     {
       "id": "years",
       "icon": "spark",
-      "icon_asset": "",
       "ru": "15+ лет в дизайне",
       "en": "15+ years in design"
     },
     {
       "id": "lead",
       "icon": "lead",
-      "icon_asset": "",
       "ru": "5 лет в lead-роли",
       "en": "5 years in lead roles"
     },
     {
       "id": "intl",
       "icon": "globe",
-      "icon_asset": "",
       "ru": "Международный IT-опыт",
       "en": "International IT experience"
     },
     {
       "id": "range",
       "icon": "grid",
-      "icon_asset": "",
       "ru": "Интерфейсы, брендинг, иллюстрация, упаковка, motion",
       "en": "Interfaces, branding, illustration, packaging, motion"
     }
@@ -65,7 +69,6 @@
           "en": "Product Design"
         },
         "icon": "product",
-        "icon_asset": "",
         "text": {
           "ru": "Проектирую интерфейсы с учетом пользовательских сценариев, бизнес-логики и контекста продукта.",
           "en": "I design interfaces around user flows, product context, and business logic."
@@ -78,7 +81,6 @@
           "en": "Visual Systems"
         },
         "icon": "visual",
-        "icon_asset": "",
         "text": {
           "ru": "Создаю цельный визуальный язык, который помогает продукту быть понятным, узнаваемым и последовательным.",
           "en": "I build cohesive visual systems that make products clearer, more distinctive, and more consistent."
@@ -91,7 +93,6 @@
           "en": "Multidisciplinary Range"
         },
         "icon": "range",
-        "icon_asset": "",
         "text": {
           "ru": "Работаю не только с интерфейсами, но и с брендингом, иллюстрацией, упаковкой и motion/video.",
           "en": "I work not only with interfaces, but also with branding, illustration, packaging, and motion/video."
@@ -104,7 +105,6 @@
           "en": "Teamwork & Ownership"
         },
         "icon": "team",
-        "icon_asset": "",
         "text": {
           "ru": "Умею брать ответственность за качество решения, работать в команде и удерживать общий уровень дизайна.",
           "en": "I take ownership of design quality, collaborate well with teams, and help maintain a strong overall standard."
