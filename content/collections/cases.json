@@ -1,38 +1,104 @@
 [
   {
-    "id": "featured-project",
-    "slug": "featured-project",
-    "featured": true,
+    "id": "interfaces-platform",
+    "slug": "interfaces-platform",
     "category": "interfaces",
+    "title_ru": "Платформа продукта",
+    "title_en": "Product Platform",
+    "summary_ru": "Системный интерфейс для продукта с фокусом на структуру, сценарии и ясность взаимодействия.",
+    "summary_en": "A structured product interface focused on flow, clarity, and consistent interaction.",
+    "cover": "assets/cases/interfaces-platform/cover.svg",
     "year": "2025",
-    "title": {
-      "ru": "Название проекта",
-      "en": "Project Title"
-    },
-    "summary": {
-      "ru": "Развитие продукта с фокусом на структуру, удобство и визуальную целостность.",
-      "en": "A product evolution project focused on structure, usability, and visual consistency."
-    },
-    "problem": {
-      "ru": "Задача состояла в том, чтобы пересобрать пользовательский сценарий, упростить структуру и сделать продукт более понятным для пользователей и команды.",
-      "en": "The challenge was to rethink the core user flow, simplify the structure, and make the product clearer for both users and the team."
-    },
-    "role": {
-      "ru": "Product Designer / Lead Designer",
-      "en": "Product Designer / Lead Designer"
-    },
-    "approach": {
-      "ru": "Я переработал ключевые сценарии, задал визуальные принципы и довел решение до состояния, пригодного для системной работы и реализации.",
-      "en": "I redesigned the key flows, established visual principles, and brought the solution to a state that was ready for systematic team use and implementation."
-    },
-    "outcome": {
-      "ru": "В результате продукт стал понятнее, цельнее и удобнее в использовании, а команда получила более ясную основу для дальнейшего развития.",
-      "en": "As a result, the product became clearer, more cohesive, and easier to use, while the team gained a stronger foundation for future development."
-    },
-    "cover": "/assets/cases/featured-project/cover.jpg",
     "gallery": [
-      "/assets/cases/featured-project/01.jpg",
-      "/assets/cases/featured-project/02.jpg"
-    ]
+      "assets/cases/interfaces-platform/01.svg",
+      "assets/cases/interfaces-platform/02.svg"
+    ],
+    "link": "",
+    "order": 1
+  },
+  {
+    "id": "interfaces-dashboard",
+    "slug": "interfaces-dashboard",
+    "category": "interfaces",
+    "title_ru": "Продуктовый дашборд",
+    "title_en": "Product Dashboard",
+    "summary_ru": "Интерфейсная система для сложного цифрового сценария с аккуратной визуальной иерархией.",
+    "summary_en": "An interface system for a complex digital flow with refined visual hierarchy.",
+    "cover": "assets/cases/interfaces-dashboard/cover.svg",
+    "year": "2024",
+    "gallery": [
+      "assets/cases/interfaces-dashboard/01.svg",
+      "assets/cases/interfaces-dashboard/02.svg"
+    ],
+    "link": "",
+    "order": 2
+  },
+  {
+    "id": "branding-system",
+    "slug": "branding-system",
+    "category": "branding",
+    "title_ru": "Бренд-система",
+    "title_en": "Brand System",
+    "summary_ru": "Визуальная система бренда с акцентом на ясность, ритм и современный характер.",
+    "summary_en": "A brand system focused on clarity, rhythm, and a contemporary visual voice.",
+    "cover": "assets/cases/branding-system/cover.svg",
+    "year": "2023",
+    "gallery": [
+      "assets/cases/branding-system/01.svg",
+      "assets/cases/branding-system/02.svg"
+    ],
+    "link": "",
+    "order": 3
+  },
+  {
+    "id": "illustration-series",
+    "slug": "illustration-series",
+    "category": "illustration",
+    "title_ru": "Иллюстративная серия",
+    "title_en": "Illustration Series",
+    "summary_ru": "Серия иллюстраций, поддерживающих тон продукта и усиливающих визуальную коммуникацию.",
+    "summary_en": "An illustration series built to support product tone and strengthen visual communication.",
+    "cover": "assets/cases/illustration-series/cover.svg",
+    "year": "2022",
+    "gallery": [
+      "assets/cases/illustration-series/01.svg",
+      "assets/cases/illustration-series/02.svg"
+    ],
+    "link": "",
+    "order": 4
+  },
+  {
+    "id": "packaging-concept",
+    "slug": "packaging-concept",
+    "category": "packaging",
+    "title_ru": "Концепт упаковки",
+    "title_en": "Packaging Concept",
+    "summary_ru": "Упаковочное решение с чистой композицией, вниманием к материалу и общему впечатлению.",
+    "summary_en": "A packaging concept shaped by clean composition, material feel, and overall impact.",
+    "cover": "assets/cases/packaging-concept/cover.svg",
+    "year": "2021",
+    "gallery": [
+      "assets/cases/packaging-concept/01.svg",
+      "assets/cases/packaging-concept/02.svg"
+    ],
+    "link": "",
+    "order": 5
+  },
+  {
+    "id": "motion-launch",
+    "slug": "motion-launch",
+    "category": "motion",
+    "title_ru": "Motion-кампания",
+    "title_en": "Motion Campaign",
+    "summary_ru": "Motion-визуалы для презентации продукта и усиления его визуального характера.",
+    "summary_en": "Motion visuals designed to present a product and amplify its visual character.",
+    "cover": "assets/cases/motion-launch/cover.svg",
+    "year": "2020",
+    "gallery": [
+      "assets/cases/motion-launch/01.svg",
+      "assets/cases/motion-launch/02.svg"
+    ],
+    "link": "",
+    "order": 6
   }
 ]

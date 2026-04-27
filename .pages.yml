@@ -1,0 +1,539 @@
+media:
+  input: assets
+  output: assets
+  categories: [image]
+
+components:
+  localized_string:
+    type: object
+    fields:
+      - name: ru
+        label: RU
+        type: string
+        required: true
+      - name: en
+        label: EN
+        type: string
+        required: true
+
+  localized_text:
+    type: object
+    fields:
+      - name: ru
+        label: RU
+        type: text
+        required: true
+      - name: en
+        label: EN
+        type: text
+        required: true
+
+  localized_footer:
+    type: object
+    fields:
+      - name: ru
+        label: RU
+        type: string
+        required: true
+      - name: en
+        label: EN
+        type: string
+        required: true
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: app
+    templates:
+      create: "content(create): {path}"
+      update: "content(update): {path}"
+      delete: "content(delete): {path}"
+      rename: "content(rename): {oldPath} -> {newPath}"
+
+content:
+  - name: globals
+    label: Globals
+    type: group
+    items:
+      - name: site
+        label: Site Settings
+        type: file
+        path: content/globals/site.json
+        format: json
+        fields:
+          - name: site_name
+            label: Legacy site name
+            type: string
+          - name: site_name_ru
+            label: Site name (RU)
+            type: string
+            required: true
+          - name: site_name_en
+            label: Site name (EN)
+            type: string
+            required: true
+          - name: role_ru
+            label: Role (RU)
+            type: string
+            required: true
+          - name: role_en
+            label: Role (EN)
+            type: string
+            required: true
+          - name: default_lang
+            label: Default language
+            type: select
+            required: true
+            options:
+              values: [ru, en]
+          - name: favicon
+            label: Favicon
+            type: image
+            options:
+              extensions: [svg, png, ico]
+          - name: phone
+            label: Phone
+            type: string
+          - name: telegram
+            label: Telegram
+            type: string
+          - name: email
+            label: Email
+            type: string
+            required: true
+          - name: linkedin
+            label: LinkedIn
+            type: string
+          - name: footer_year
+            label: Footer year
+            type: string
+          - name: theme
+            label: Theme
+            type: object
+            fields:
+              - name: paper
+                label: Paper
+                type: string
+                required: true
+              - name: panel
+                label: Panel
+                type: string
+                required: true
+              - name: ink
+                label: Ink
+                type: string
+                required: true
+              - name: accent
+                label: Accent
+                type: string
+                required: true
+              - name: line
+                label: Line
+                type: string
+                required: true
+
+      - name: navigation
+        label: Navigation
+        type: file
+        path: content/globals/navigation.json
+        format: json
+        fields:
+          - name: items
+            label: Menu items
+            type: object
+            list: true
+            fields:
+              - name: id
+                label: ID
+                type: string
+                required: true
+              - name: href
+                label: Link
+                type: string
+                required: true
+
+      - name: ui
+        label: UI Labels
+        type: file
+        path: content/globals/ui.json
+        format: json
+        fields:
+          - name: labels
+            label: Labels
+            type: object
+            fields:
+              - name: portfolio
+                label: Portfolio
+                component: localized_string
+              - name: about
+                label: About
+                component: localized_string
+              - name: contact
+                label: Contact
+                component: localized_string
+              - name: focus
+                label: Focus
+                component: localized_string
+              - name: categories
+                label: Categories
+                component: localized_string
+              - name: viewWork
+                label: View work
+                component: localized_string
+              - name: contactMe
+                label: Contact me
+                component: localized_string
+              - name: all
+                label: All
+                component: localized_string
+              - name: openCase
+                label: Open case
+                component: localized_string
+              - name: backToPortfolio
+                label: Back to portfolio
+                component: localized_string
+              - name: phone
+                label: Phone
+                component: localized_string
+              - name: email
+                label: Email
+                component: localized_string
+              - name: telegram
+                label: Telegram
+                component: localized_string
+              - name: linkedin
+                label: LinkedIn
+                component: localized_string
+              - name: year
+                label: Year
+                component: localized_string
+              - name: visitLink
+                label: Visit link
+                component: localized_string
+              - name: notFound
+                label: Not found
+                component: localized_string
+              - name: notFoundText
+                label: Not found text
+                component: localized_string
+
+  - name: pages
+    label: Pages
+    type: group
+    items:
+      - name: home
+        label: Home
+        type: file
+        path: content/pages/home.json
+        format: json
+        fields:
+          - name: hero
+            label: Hero
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                component: localized_string
+              - name: title
+                label: Title
+                component: localized_text
+              - name: text
+                label: Supporting text
+                component: localized_text
+              - name: visual
+                label: Hero visual
+                type: image
+                options:
+                  path: hero
+                  extensions: [svg, png, jpg, jpeg, webp]
+              - name: actions
+                label: Hero actions
+                type: object
+                list: true
+                fields:
+                  - name: id
+                    label: ID
+                    type: string
+                    required: true
+                  - name: href
+                    label: Link
+                    type: string
+                    required: true
+                  - name: style
+                    label: Style
+                    type: select
+                    required: true
+                    options:
+                      values: [primary, secondary]
+
+          - name: proof_points
+            label: Proof points
+            type: object
+            list: true
+            fields:
+              - name: id
+                label: ID
+                type: string
+                required: true
+              - name: icon
+                label: Built-in icon
+                type: select
+                options:
+                  values: [spark, lead, globe, grid]
+              - name: icon_asset
+                label: Custom icon
+                type: image
+                options:
+                  path: icons
+                  extensions: [svg, png, webp]
+              - name: ru
+                label: RU
+                type: string
+                required: true
+              - name: en
+                label: EN
+                type: string
+                required: true
+
+          - name: focus
+            label: Focus section
+            type: object
+            fields:
+              - name: title
+                label: Section title
+                component: localized_string
+              - name: intro
+                label: Intro
+                component: localized_text
+              - name: items
+                label: Cards
+                type: object
+                list: true
+                fields:
+                  - name: id
+                    label: ID
+                    type: string
+                    required: true
+                  - name: title
+                    label: Title
+                    component: localized_string
+                  - name: icon
+                    label: Built-in icon
+                    type: select
+                    options:
+                      values: [product, visual, range, team]
+                  - name: icon_asset
+                    label: Custom icon
+                    type: image
+                    options:
+                      path: icons
+                      extensions: [svg, png, webp]
+                  - name: text
+                    label: Description
+                    component: localized_text
+
+          - name: categories
+            label: Categories section
+            type: object
+            fields:
+              - name: title
+                label: Title
+                component: localized_string
+              - name: intro
+                label: Intro
+                component: localized_text
+
+          - name: portfolio
+            label: Portfolio section
+            type: object
+            fields:
+              - name: title
+                label: Title
+                component: localized_string
+              - name: intro
+                label: Intro
+                component: localized_text
+
+          - name: about
+            label: About section
+            type: object
+            fields:
+              - name: title
+                label: Title
+                component: localized_string
+              - name: paragraphs
+                label: Paragraphs
+                type: object
+                list: true
+                fields:
+                  - name: ru
+                    label: RU
+                    type: text
+                    required: true
+                  - name: en
+                    label: EN
+                    type: text
+                    required: true
+              - name: principles
+                label: Principles
+                type: object
+                list: true
+                fields:
+                  - name: id
+                    label: ID
+                    type: string
+                  - name: ru
+                    label: RU
+                    type: string
+                    required: true
+                  - name: en
+                    label: EN
+                    type: string
+                    required: true
+
+          - name: contact
+            label: Contact section
+            type: object
+            fields:
+              - name: title
+                label: Title
+                component: localized_string
+              - name: text
+                label: Text
+                component: localized_text
+
+          - name: footer
+            label: Footer
+            type: object
+            fields:
+              - name: title
+                label: Name
+                component: localized_footer
+              - name: role
+                label: Role
+                component: localized_footer
+
+  - name: collections
+    label: Collections
+    type: group
+    items:
+      - name: categories
+        label: Categories
+        type: file
+        path: content/collections/categories.json
+        format: json
+        list: true
+        fields:
+          - name: id
+            label: ID
+            type: string
+            required: true
+            pattern: "^[a-z0-9-]+$"
+          - name: slug
+            label: Slug
+            type: string
+            required: true
+            pattern: "^[a-z0-9-]+$"
+          - name: title_ru
+            label: Title (RU)
+            type: string
+            required: true
+          - name: title_en
+            label: Title (EN)
+            type: string
+            required: true
+          - name: summary_ru
+            label: Summary (RU)
+            type: text
+            required: true
+          - name: summary_en
+            label: Summary (EN)
+            type: text
+            required: true
+          - name: order
+            label: Order
+            type: number
+            required: true
+            options:
+              min: 1
+              step: 1
+
+      - name: cases
+        label: Cases
+        type: file
+        path: content/collections/cases.json
+        format: json
+        list: true
+        view:
+          primary: title_ru
+          fields: [category, year, order]
+          sort: [order, year, title_ru]
+          search: [title_ru, title_en, summary_ru, summary_en, slug]
+          default:
+            sort: order
+            order: asc
+        fields:
+          - name: id
+            label: ID
+            type: string
+            required: true
+            pattern: "^[a-z0-9-]+$"
+          - name: slug
+            label: Slug
+            type: string
+            required: true
+            pattern: "^[a-z0-9-]+$"
+          - name: category
+            label: Category
+            type: reference
+            required: true
+            options:
+              collection: categories
+              search: "title_ru,title_en,slug"
+              value: "{id}"
+              label: "{title_ru} / {title_en}"
+          - name: title_ru
+            label: Title (RU)
+            type: string
+            required: true
+          - name: title_en
+            label: Title (EN)
+            type: string
+            required: true
+          - name: summary_ru
+            label: Summary (RU)
+            type: text
+            required: true
+          - name: summary_en
+            label: Summary (EN)
+            type: text
+            required: true
+          - name: cover
+            label: Cover
+            type: image
+            required: true
+            options:
+              path: cases
+              extensions: [svg, png, jpg, jpeg, webp]
+          - name: year
+            label: Year
+            type: string
+          - name: gallery
+            label: Gallery
+            type: image
+            options:
+              path: cases
+              extensions: [svg, png, jpg, jpeg, webp]
+              multiple:
+                max: 8
+          - name: link
+            label: External link
+            type: string
+          - name: order
+            label: Order
+            type: number
+            required: true
+            options:
+              min: 1
+              step: 1

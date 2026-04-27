@@ -1,11 +1,7 @@
 {
   "items": [
-    { "id": "work", "href": "#work" },
-    { "id": "profile", "href": "#profile" },
+    { "id": "portfolio", "href": "#portfolio" },
+    { "id": "about", "href": "#about" },
     { "id": "contact", "href": "#contact" }
-  ],
-  "cta": {
-    "id": "getInTouch",
-    "href": "#contact"
-  }
+  ]
 }

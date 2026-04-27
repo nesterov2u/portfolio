@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrey Nesterov — Product Designer</title>
+    <meta
+      name="description"
+      content="Product Designer with a multidisciplinary background in interfaces, branding, illustration, packaging, and motion."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "rgb(var(--color-ink) / <alpha-value>)",
+              paper: "rgb(var(--color-paper) / <alpha-value>)",
+              panel: "rgb(var(--color-panel) / <alpha-value>)",
+              line: "rgb(var(--color-line) / <alpha-value>)",
+              accent: "rgb(var(--color-accent) / <alpha-value>)",
+              accentSoft: "rgb(var(--color-accent-soft) / <alpha-value>)",
+              ember: "rgb(var(--color-accent) / <alpha-value>)",
+              emberSoft: "rgb(var(--color-accent-soft) / <alpha-value>)"
+            },
+            fontFamily: {
+              display: ["Unbounded", "sans-serif"],
+              body: ["Manrope", "sans-serif"]
+            },
+            boxShadow: {
+              glow: "0 32px 80px rgba(20, 216, 255, 0.18)"
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-paper text-ink font-body">
+    <div id="app"></div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

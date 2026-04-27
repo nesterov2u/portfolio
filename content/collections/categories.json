@@ -2,61 +2,46 @@
   {
     "id": "interfaces",
     "slug": "interfaces",
-    "title": {
-      "ru": "Interfaces",
-      "en": "Interfaces"
-    },
-    "summary": {
-      "ru": "Продуктовые интерфейсы с фокусом на сценарии, структуру и ясность взаимодействия.",
-      "en": "Product interfaces focused on user flow clarity, structure, and ease of use."
-    }
+    "title_ru": "Интерфейсы",
+    "title_en": "Interfaces",
+    "summary_ru": "Интерфейсы и продуктовые сценарии, где важны логика, удобство и визуальная ясность.",
+    "summary_en": "Interfaces and product flows where logic, usability, and visual clarity matter.",
+    "order": 1
   },
   {
     "id": "branding",
     "slug": "branding",
-    "title": {
-      "ru": "Branding",
-      "en": "Branding"
-    },
-    "summary": {
-      "ru": "Айдентика и визуальные системы, которые делают бренд цельным и узнаваемым.",
-      "en": "Identity systems that make brands more cohesive, recognisable, and clear."
-    }
+    "title_ru": "Брендинг",
+    "title_en": "Branding",
+    "summary_ru": "Айдентика и визуальные системы, которые помогают бренду выглядеть цельно и узнаваемо.",
+    "summary_en": "Identity and visual systems that help a brand feel cohesive and recognizable.",
+    "order": 2
   },
   {
     "id": "illustration",
     "slug": "illustration",
-    "title": {
-      "ru": "Illustration",
-      "en": "Illustration"
-    },
-    "summary": {
-      "ru": "Иллюстративные решения, поддерживающие характер продукта и коммуникацию.",
-      "en": "Illustration work that supports product character and communication."
-    }
+    "title_ru": "Иллюстрация",
+    "title_en": "Illustration",
+    "summary_ru": "Иллюстрации, которые добавляют продукту характер и поддерживают коммуникацию.",
+    "summary_en": "Illustration that adds character to a product and supports communication.",
+    "order": 3
   },
   {
     "id": "packaging",
     "slug": "packaging",
-    "title": {
-      "ru": "Packaging",
-      "en": "Packaging"
-    },
-    "summary": {
-      "ru": "Упаковка с акцентом на простоту, визуальную логику и узнаваемость.",
-      "en": "Packaging solutions focused on simplicity, visual logic, and recognition."
-    }
+    "title_ru": "Упаковка",
+    "title_en": "Packaging",
+    "summary_ru": "Упаковочные решения с вниманием к форме, детали и общему впечатлению.",
+    "summary_en": "Packaging concepts shaped by form, detail, and overall impression.",
+    "order": 4
   },
   {
     "id": "motion",
     "slug": "motion",
-    "title": {
-      "ru": "Motion / Video",
-      "en": "Motion / Video"
-    },
-    "summary": {
-      "ru": "Motion-материалы для презентации продукта, бренда или ключевого сообщения.",
-      "en": "Motion work created to present a product, a brand, or a key message more effectively."
-    }
+    "title_ru": "Моушн / Видео",
+    "title_en": "Motion / Video",
+    "summary_ru": "Motion и видео для презентации продукта, идеи или визуального характера бренда.",
+    "summary_en": "Motion and video work for presenting a product, an idea, or a brand's visual character.",
+    "order": 5
   }
 ]

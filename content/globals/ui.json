@@ -1,32 +1,76 @@
 {
   "labels": {
-    "work": {
-      "ru": "Кейсы",
-      "en": "Work"
+    "portfolio": {
+      "ru": "Портфолио",
+      "en": "Portfolio"
     },
-    "profile": {
-      "ru": "Профиль",
-      "en": "Profile"
+    "about": {
+      "ru": "Обо мне",
+      "en": "About"
     },
     "contact": {
       "ru": "Контакты",
       "en": "Contact"
     },
-    "getInTouch": {
-      "ru": "Связаться",
-      "en": "Get in touch"
+    "focus": {
+      "ru": "Фокус в работе",
+      "en": "Focus Areas"
+    },
+    "categories": {
+      "ru": "Направления",
+      "en": "Categories"
     },
     "viewWork": {
-      "ru": "Смотреть кейсы",
+      "ru": "Смотреть работы",
       "en": "View work"
     },
     "contactMe": {
-      "ru": "Написать",
-      "en": "Contact me"
+      "ru": "Связаться",
+      "en": "Get in touch"
+    },
+    "all": {
+      "ru": "Все",
+      "en": "All"
     },
     "openCase": {
       "ru": "Открыть кейс",
       "en": "Open case"
+    },
+    "backToPortfolio": {
+      "ru": "Назад к портфолио",
+      "en": "Back to portfolio"
+    },
+    "phone": {
+      "ru": "Телефон",
+      "en": "Phone"
+    },
+    "email": {
+      "ru": "Email",
+      "en": "Email"
+    },
+    "telegram": {
+      "ru": "Telegram",
+      "en": "Telegram"
+    },
+    "linkedin": {
+      "ru": "LinkedIn",
+      "en": "LinkedIn"
+    },
+    "year": {
+      "ru": "Год",
+      "en": "Year"
+    },
+    "visitLink": {
+      "ru": "Открыть ссылку",
+      "en": "Visit link"
+    },
+    "notFound": {
+      "ru": "Кейс не найден",
+      "en": "Case not found"
+    },
+    "notFoundText": {
+      "ru": "Этот кейс пока не опубликован или был перемещен.",
+      "en": "This case is not published yet or has been moved."
     }
   }
 }

@@ -1,6 +1,21 @@
 {
-  "name": "Andrey Nesterov",
-  "role": "Product Designer",
-  "defaultLang": "ru",
-  "languages": ["ru", "en"]
+  "site_name": "Andrey Nesterov",
+  "site_name_ru": "Андрей Нестеров",
+  "site_name_en": "Andrey Nesterov",
+  "role_ru": "Продуктовый дизайнер",
+  "role_en": "Product Designer",
+  "default_lang": "ru",
+  "favicon": "assets/favicon.svg",
+  "phone": "+7 (900) 000-00-00",
+  "telegram": "https://t.me/username",
+  "email": "hello@example.com",
+  "linkedin": "https://linkedin.com/in/username",
+  "footer_year": "2026",
+  "theme": {
+    "paper": "#f6fbff",
+    "panel": "#fcfeff",
+    "ink": "#111111",
+    "accent": "#14d8ff",
+    "line": "#dfeaf5"
+  }
 }

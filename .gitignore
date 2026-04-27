@@ -1,1 +1,6 @@
 .DS_Store
+.playwright-mcp/
+*-check.png
+*-checked.png
+*-verified.png
+*-stronger.png
