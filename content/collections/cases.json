@@ -7,13 +7,12 @@
     "title_en": "Product Platform",
     "summary_ru": "Системный интерфейс для продукта с фокусом на структуру, сценарии и ясность взаимодействия.",
     "summary_en": "A structured product interface focused on flow, clarity, and consistent interaction.",
-    "cover": "assets/cases/interfaces-platform/cover.svg",
+    "cover": "assets/1C-Drive-Card.svg",
     "year": "2025",
     "gallery": [
       "assets/cases/interfaces-platform/01.svg",
       "assets/cases/interfaces-platform/02.svg"
     ],
-    "link": "",
     "order": 1
   },
   {
@@ -30,7 +29,6 @@
       "assets/cases/interfaces-dashboard/01.svg",
       "assets/cases/interfaces-dashboard/02.svg"
     ],
-    "link": "",
     "order": 2
   },
   {
@@ -47,7 +45,6 @@
       "assets/cases/branding-system/01.svg",
       "assets/cases/branding-system/02.svg"
     ],
-    "link": "",
     "order": 3
   },
   {
@@ -64,7 +61,6 @@
       "assets/cases/illustration-series/01.svg",
       "assets/cases/illustration-series/02.svg"
     ],
-    "link": "",
     "order": 4
   },
   {
@@ -81,7 +77,6 @@
       "assets/cases/packaging-concept/01.svg",
       "assets/cases/packaging-concept/02.svg"
     ],
-    "link": "",
     "order": 5
   },
   {
@@ -98,7 +93,6 @@
       "assets/cases/motion-launch/01.svg",
       "assets/cases/motion-launch/02.svg"
     ],
-    "link": "",
     "order": 6
   }
 ]
