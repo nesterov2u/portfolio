@@ -374,15 +374,15 @@ const renderHero = (home, ui, lang) => `
       <div class="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(340px,0.85fr)] lg:items-start">
         <div class="flex flex-col gap-8">
           <div class="max-w-2xl">
-            <p class="mb-5 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-ink/55">
+            <p class="mb-4 text-[0.68rem] font-medium uppercase tracking-[0.16em] text-ink/55 sm:mb-5 sm:text-[0.72rem] sm:tracking-[0.18em]">
               ${textFor(home.hero.eyebrow, lang)}
             </p>
-            <h1 class="max-w-4xl font-display text-[3.2rem] leading-[0.94] tracking-[-0.05em] text-ink sm:text-[4.2rem] lg:text-[4.7rem]">
+            <h1 class="max-w-4xl font-display text-[2.55rem] leading-[0.9] tracking-[-0.055em] text-ink sm:text-[4.2rem] lg:text-[4.7rem]">
               ${textFor(home.hero.title, lang)}
             </h1>
           </div>
           <div class="flex max-w-xl flex-col gap-7">
-            <p class="max-w-xl text-base leading-7 text-ink/72 md:text-lg">
+            <p class="max-w-xl text-[0.95rem] leading-[1.8] text-ink/72 sm:text-base sm:leading-7 md:text-lg">
               ${textFor(home.hero.text, lang)}
             </p>
             <div class="flex flex-wrap gap-3">
