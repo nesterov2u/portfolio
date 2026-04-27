@@ -9,7 +9,7 @@
       "en": "Design with clarity, character and system"
     },
     "text": {
-      "ru": "Я Product Designer с 15+ годами опыта в дизайне. Последние 5 лет работал Lead Designer в международной IT-компании. Мой опыт включает интерфейсы, брендинг, иллюстрацию, упаковку и motion/video.",
+      "ru": "Я графический дизайнер с 15+ годами опыта в дизайне. Последние 5 лет работал ведущим дизайнером в международной IT-компании. Мой опыт включает интерфейсы, брендинг, иллюстрацию, упаковку и монтаж моушн/видео.",
       "en": "I am a Product Designer with 15+ years in design, including 5 years as a Lead Designer in an international IT company. My background spans interfaces, branding, illustration, packaging, and motion/video."
     },
     "visual": "assets/hero/hero-visual.svg",
@@ -89,7 +89,7 @@
       {
         "id": "multidisciplinary-range",
         "title": {
-          "ru": "Мультидисциплинарный опыт",
+          "ru": "Разносторонний опыт",
           "en": "Multidisciplinary Range"
         },
         "icon": "range",
