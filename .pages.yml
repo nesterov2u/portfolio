@@ -486,13 +486,20 @@ content:
             pattern: "^[a-z0-9-]+$"
           - name: category
             label: Category
-            type: reference
+            type: select
             required: true
             options:
-              collection: categories
-              search: "title_ru,title_en,slug"
-              value: "{id}"
-              label: "{title_ru} / {title_en}"
+              values:
+                - label: "Интерфейсы / Interfaces"
+                  value: "interfaces"
+                - label: "Брендинг / Branding"
+                  value: "branding"
+                - label: "Иллюстрация / Illustration"
+                  value: "illustration"
+                - label: "Упаковка / Packaging"
+                  value: "packaging"
+                - label: "Моушн / Видео / Motion / Video"
+                  value: "motion"
           - name: title_ru
             label: Title (RU)
             type: string
