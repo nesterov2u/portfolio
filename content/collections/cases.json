@@ -64,24 +64,6 @@
     "order": 4
   },
   {
-    "id": "packaging-design",
-    "slug": "packaging-design",
-    "category": "packaging",
-    "title_ru": "Упаковка герметиков KUDO",
-    "title_en": "Package design KUDO",
-    "summary_ru": "Упаковочное решение с чистой композицией, вниманием к материалу и общему впечатлению.",
-    "summary_en": "A packaging concept shaped by clean composition, material feel, and overall impact.",
-    "cover": "assets/kudo2 — крупный размер.jpeg",
-    "year": "2021",
-    "gallery": [
-      "assets/83929756_2463599543970279_5232607070941624346_n.jpg",
-      "assets/81051117_529520381245159_7201576935637984407_n.jpg",
-      "assets/89805244_108785303927842_6826794937597206703_n.jpg",
-      "assets/82474597_526817674899475_199714239727915501_n-1.jpg"
-    ],
-    "order": 5
-  },
-  {
     "id": "package-olea",
     "slug": "package-olea",
     "category": "packaging",
