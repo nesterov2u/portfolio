@@ -1,9 +1,9 @@
 [
   {
-    "id": "interfaces",
-    "slug": "interfaces",
+    "id": "ui",
+    "slug": "ui",
     "title_ru": "Интерфейсы",
-    "title_en": "Interfaces",
+    "title_en": "UI",
     "summary_ru": "Интерфейсы и продуктовые сценарии, где важны логика, удобство и визуальная ясность.",
     "summary_en": "Interfaces and product flows where logic, usability, and visual clarity matter.",
     "order": 1
