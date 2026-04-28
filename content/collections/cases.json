@@ -48,18 +48,18 @@
     "order": 3
   },
   {
-    "id": "illustration-series",
-    "slug": "illustration-series",
-    "category": "illustration",
-    "title_ru": "Иллюстративная серия",
-    "title_en": "Illustration Series",
-    "summary_ru": "Серия иллюстраций, поддерживающих тон продукта и усиливающих визуальную коммуникацию.",
-    "summary_en": "An illustration series built to support product tone and strengthen visual communication.",
-    "cover": "assets/cases/illustration-series/cover.svg",
+    "id": "1ci-cat",
+    "slug": "1ci-cat",
+    "category": "interfaces",
+    "title_ru": "Интерфейс 1Ci CAT",
+    "title_en": "1Ci CAT UI",
+    "summary_ru": "Дизайн интерфейса системы переводов 1Ci CAT",
+    "summary_en": "UI design of the 1Ci CAT translation system",
+    "cover": "assets/Editor-Default.png",
     "year": "2022",
     "gallery": [
-      "assets/cases/illustration-series/01.svg",
-      "assets/cases/illustration-series/02.svg"
+      "assets/Frame 390.png",
+      "assets/Glossary-Open.png"
     ],
     "order": 4
   },
