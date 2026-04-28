@@ -335,10 +335,12 @@ const renderHeader = (site, navigation, ui, lang) => {
   const siteName = lang === "ru"
     ? site.site_name_ru || site.site_name
     : site.site_name_en || site.site_name;
+  const resolveNavHref = (href) =>
+    href && href.startsWith("#") ? `${BASE_URL}/?lang=${lang}${href}` : href;
   const navItems = navigation.items
     .map(
       (item) => `
-        <a class="text-[0.96rem] font-medium text-ink transition hover:text-ink/80" href="${item.href}">${textFor(
+        <a class="text-[0.96rem] font-medium text-ink transition hover:text-ink/80" href="${resolveNavHref(item.href)}">${textFor(
           ui.labels[item.id],
           lang
         )}</a>
@@ -349,7 +351,7 @@ const renderHeader = (site, navigation, ui, lang) => {
   const mobileNavItems = navigation.items
     .map(
       (item) => `
-        <a class="rounded-[1rem] border border-ink/8 bg-white/72 px-4 py-3 text-base font-medium text-ink/78 transition hover:border-accent hover:bg-accentSoft hover:text-ink" href="${item.href}">
+        <a class="rounded-[1rem] border border-ink/8 bg-white/72 px-4 py-3 text-base font-medium text-ink/78 transition hover:border-accent hover:bg-accentSoft hover:text-ink" href="${resolveNavHref(item.href)}">
           ${textFor(ui.labels[item.id], lang)}
         </a>
       `
