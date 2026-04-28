@@ -80,5 +80,22 @@
       "assets/82474597_526817674899475_199714239727915501_n-1.jpg"
     ],
     "order": 5
+  },
+  {
+    "id": "package-olea",
+    "slug": "package-olea",
+    "category": "packaging",
+    "title_ru": "Концепт упаковки Olea",
+    "title_en": "Package concept Olea",
+    "summary_ru": "Концепт упаковки набора косметики.",
+    "summary_en": "Cosmetics set packaging concept.",
+    "cover": "assets/Oleo-Var-2-1 2 — крупный размер.jpeg",
+    "gallery": [
+      "assets/Oleo-Var-2-2 2 — крупный размер.jpeg",
+      "assets/Oleo-Var-2-4 2 — крупный размер.jpeg",
+      "assets/Oleo-Var-2-3 2 — крупный размер.jpeg",
+      "assets/Oleo-Var-2-5 2 — крупный размер.jpeg"
+    ],
+    "order": 6
   }
 ]
