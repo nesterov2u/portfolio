@@ -16,6 +16,8 @@ const state = {
   activeCategory: "all"
 };
 
+const toArray = (value) => (Array.isArray(value) ? value : []);
+
 const pathWithoutBase = () => {
   const path = window.location.pathname;
   if (GITHUB_PAGES_BASE && path.startsWith(GITHUB_PAGES_BASE)) {
@@ -154,6 +156,36 @@ const resolveCategory = (categories, key) => {
     categories.find((entry) => entry.slug === key) ||
     null
   );
+};
+
+const normalizeCategory = (entry) => {
+  if (!entry || typeof entry !== "object") {
+    return null;
+  }
+
+  const relationKey = entry.key || entry.id || entry.slug;
+  if (!relationKey) {
+    return null;
+  }
+
+  return {
+    ...entry,
+    key: relationKey,
+    id: entry.id || relationKey,
+    slug: entry.slug || relationKey
+  };
+};
+
+const normalizeCase = (entry) => {
+  if (!entry || typeof entry !== "object") {
+    return null;
+  }
+
+  if (!entry.slug || !entry.category) {
+    return null;
+  }
+
+  return entry;
 };
 
 const proofIcon = (name) => {
@@ -425,6 +457,9 @@ const renderHero = (home, ui, lang) => `
               class="h-[360px] w-full rounded-[1.4rem] object-cover md:h-[460px]"
               src="${assetUrl(home.hero.visual)}"
               alt=""
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
           </div>
         </div>
@@ -520,7 +555,17 @@ const renderPortfolioCards = (categories, cases, ui, lang, filter) => {
       [item.slug, item]
     ])
   );
-  const filtered = filter === "all" ? cases : cases.filter((item) => item.category === filter);
+  const filtered =
+    filter === "all"
+      ? cases
+      : cases.filter((item) => {
+          const category = resolveCategory(categories, item.category);
+          if (!category) {
+            return item.category === filter;
+          }
+
+          return (category.key || category.id || category.slug) === filter;
+        });
   const sorted = [...filtered].sort((a, b) => a.order - b.order);
 
   return sorted
@@ -539,7 +584,14 @@ const renderPortfolioCards = (categories, cases, ui, lang, filter) => {
           class="section-reveal card-tilt glass-edge group flex h-full flex-col overflow-hidden rounded-[1.8rem] border bg-white/80 ${wideClass}"
         >
           <div class="overflow-hidden">
-            <img class="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-72" src="${assetUrl(item.cover)}" alt="${title}" />
+            <img
+              class="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-72"
+              src="${assetUrl(item.cover)}"
+              alt="${title}"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
+            />
           </div>
           <div class="flex flex-1 flex-col gap-3 p-5 md:p-6">
             <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-ink/45">${categoryName}</p>
@@ -746,7 +798,14 @@ const renderCase = (data, lang, slug) => {
             </div>
           </div>
           <div class="glass-edge overflow-hidden rounded-[1.6rem] border bg-panel">
-            <img class="h-[320px] w-full object-cover md:h-[460px]" src="${assetUrl(item.cover)}" alt="${title}" />
+            <img
+              class="h-[320px] w-full object-cover md:h-[460px]"
+              src="${assetUrl(item.cover)}"
+              alt="${title}"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
@@ -759,7 +818,14 @@ const renderCase = (data, lang, slug) => {
                   .map(
                     (image, index) => `
                       <figure class="card-tilt glass-edge overflow-hidden rounded-[1.8rem] border bg-white/78">
-                        <img class="h-[280px] w-full object-cover md:h-[380px]" src="${assetUrl(image)}" alt="${title} ${index + 1}" />
+                        <img
+                          class="h-[280px] w-full object-cover md:h-[380px]"
+                          src="${assetUrl(image)}"
+                          alt="${title} ${index + 1}"
+                          loading="lazy"
+                          fetchpriority="low"
+                          decoding="async"
+                        />
                       </figure>
                     `
                   )
@@ -864,8 +930,14 @@ const loadData = async () => {
     navigation,
     ui,
     home,
-    categories: [...categories].sort((a, b) => a.order - b.order),
-    cases: [...cases].sort((a, b) => a.order - b.order)
+    categories: toArray(categories)
+      .map(normalizeCategory)
+      .filter(Boolean)
+      .sort((a, b) => (a.order ?? 999) - (b.order ?? 999)),
+    cases: toArray(cases)
+      .map(normalizeCase)
+      .filter(Boolean)
+      .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
   };
 };
 
