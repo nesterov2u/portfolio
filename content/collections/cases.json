@@ -7,12 +7,13 @@
     "title_en": "1Ci Partner Summit 2024 Landing Page",
     "summary_ru": "Лендинг для партнёрского саммита 1Ci 2024 с акцентом на программу, спикеров и удобную навигацию по событию.",
     "summary_en": "Landing page for the 1Ci Partner Summit 2024 focused on the agenda, speakers, and clear event navigation.\n\n\n\n",
-    "cover": "assets/Partner-Summit-2024.png",
+    "cover": "assets/Partner-Summit-2024-1.png",
     "year": "2024",
     "gallery": [
-      "assets/1Ci-Partner-Summit-2024-Work-1-1.png",
-      "assets/1Ci-Partner-Summit-2024-Work-2.png",
-      "assets/1Ci-Partner-Summit-2024-Work-3.png"
+      "assets/1Ci-Partner-Summit-2024-Work-1-2.png",
+      "assets/1Ci-Partner-Summit-2024-Work-2-1.png",
+      "assets/1Ci-Partner-Summit-2024-Work-3-1.png",
+      "assets/1Ci-Partner-Summit-2024-Work-4.png"
     ],
     "order": 1
   },
