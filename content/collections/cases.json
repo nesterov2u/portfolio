@@ -1,17 +1,18 @@
 [
   {
-    "id": "interfaces-platform",
-    "slug": "interfaces-platform",
+    "id": "landing-summit",
+    "slug": "landing-summit",
     "category": "interfaces",
-    "title_ru": "Платформа продукта",
-    "title_en": "Product Platform",
-    "summary_ru": "Системный интерфейс для продукта с фокусом на структуру, сценарии и ясность взаимодействия.",
-    "summary_en": "A structured product interface focused on flow, clarity, and consistent interaction.",
-    "cover": "assets/Visual-Drive-Email-Mobile.svg",
-    "year": "2025",
+    "title_ru": "Лендинг 1Ci партнёрский Саммит 2024 ",
+    "title_en": "1Ci Partner Summit 2024 Landing Page",
+    "summary_ru": "Лендинг для партнёрского саммита 1Ci 2024 с акцентом на программу, спикеров и удобную навигацию по событию.",
+    "summary_en": "Landing page for the 1Ci Partner Summit 2024 focused on the agenda, speakers, and clear event navigation.\n\n\n\n",
+    "cover": "assets/Partner-Summit-2024.png",
+    "year": "2024",
     "gallery": [
-      "assets/cases/interfaces-platform/01.svg",
-      "assets/cases/interfaces-platform/02.svg"
+      "assets/1Ci-Partner-Summit-2024-Work-1-1.png",
+      "assets/1Ci-Partner-Summit-2024-Work-2.png",
+      "assets/1Ci-Partner-Summit-2024-Work-3.png"
     ],
     "order": 1
   },
