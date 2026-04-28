@@ -29,20 +29,22 @@ jobs:
       - name: Prepare static artifact
         run: |
           mkdir -p _site
-          rsync -av --delete \
-            --exclude '.git/' \
-            --exclude '.github/' \
-            --exclude '.gitignore' \
-            --exclude '.pages.yml' \
-            --exclude 'README.md' \
-            --exclude 'focus-dark-check.png' \
-            --exclude 'focus-dark-checked.png' \
-            --exclude 'focus-glow-check.png' \
-            --exclude 'focus-glow-stronger.png' \
-            --exclude 'focus-glow-verified.png' \
-            --exclude 'focus-icons-check.png' \
-            --exclude 'hero-visual-check.png' \
-            ./ _site/
+          cp index.html 404.html app.js styles.css _site/
+          cp -R assets content _site/
+
+          if [ -f CNAME ]; then
+            cp CNAME _site/
+          fi
+
+      - name: Verify artifact
+        run: |
+          test -f _site/index.html
+          test -f _site/404.html
+          test -f _site/app.js
+          test -f _site/styles.css
+          test -f _site/content/pages/home.json
+          test -d _site/assets
+          test -d _site/content
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
