@@ -426,20 +426,23 @@ content:
         list: true
         fields:
           - name: key
-            label: Category key
+            label: Category key (technical)
             type: string
             required: true
             pattern: "^[a-z0-9-]+$"
+            description: "Stable relation key used by filters and cases. Do not change after creation."
           - name: id
             label: ID
             type: string
             required: true
             pattern: "^[a-z0-9-]+$"
+            description: "Editable CMS-facing identifier. Can be renamed without breaking case relations."
           - name: slug
             label: Slug
             type: string
             required: true
             pattern: "^[a-z0-9-]+$"
+            description: "Editable URL-style value for CMS organization. Can be renamed."
           - name: title_ru
             label: Title (RU)
             type: string
@@ -503,6 +506,8 @@ content:
                   value: "illustration"
                 - label: "Упаковка / Packaging"
                   value: "packaging"
+                - label: "Печатные материалы / Print"
+                  value: "print"
                 - label: "Моушн / Видео / Motion / Video"
                   value: "motion"
           - name: title_ru
