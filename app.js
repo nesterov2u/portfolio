@@ -143,6 +143,18 @@ const textFor = (value, lang) => {
   return value[lang] || value.ru || value.en || "";
 };
 
+const resolveCategory = (categories, key) => {
+  if (!Array.isArray(categories) || !key) {
+    return null;
+  }
+
+  return (
+    categories.find((entry) => entry.id === key) ||
+    categories.find((entry) => entry.slug === key) ||
+    null
+  );
+};
+
 const proofIcon = (name) => {
   const base = "h-10 w-10 text-ink";
   const icons = {
@@ -500,14 +512,21 @@ const renderPortfolioSection = (home, categories, ui, lang) => `
 `;
 
 const renderPortfolioCards = (categories, cases, ui, lang, filter) => {
-  const categoryMap = new Map(categories.map((item) => [item.id, item]));
+  const categoryMap = new Map(
+    categories.flatMap((item) => [
+      [item.id, item],
+      [item.slug, item]
+    ])
+  );
   const filtered = filter === "all" ? cases : cases.filter((item) => item.category === filter);
   const sorted = [...filtered].sort((a, b) => a.order - b.order);
 
   return sorted
     .map((item, index) => {
       const category = categoryMap.get(item.category);
-      const categoryName = lang === "ru" ? category.title_ru : category.title_en;
+      const categoryName = category
+        ? (lang === "ru" ? category.title_ru : category.title_en)
+        : item.category;
       const title = lang === "ru" ? item.title_ru : item.title_en;
       const summary = lang === "ru" ? item.summary_ru : item.summary_en;
       const wideClass = index === 0 ? "md:col-span-2 2xl:col-span-2" : "";
@@ -694,10 +713,10 @@ const renderCase = (data, lang, slug) => {
     `;
   }
 
-  const category = categories.find((entry) => entry.id === item.category);
+  const category = resolveCategory(categories, item.category);
   const title = lang === "ru" ? item.title_ru : item.title_en;
   const summary = lang === "ru" ? item.summary_ru : item.summary_en;
-  const categoryName = lang === "ru" ? category.title_ru : category.title_en;
+  const categoryName = category ? (lang === "ru" ? category.title_ru : category.title_en) : item.category;
 
   return `
     ${renderHeader(site, navigation, ui, lang)}

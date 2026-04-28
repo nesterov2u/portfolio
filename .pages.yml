@@ -490,7 +490,7 @@ content:
             required: true
             options:
               values:
-                - label: "Интерфейсы / Interfaces"
+                - label: "UI / UI"
                   value: "interfaces"
                 - label: "Брендинг / Branding"
                   value: "branding"
