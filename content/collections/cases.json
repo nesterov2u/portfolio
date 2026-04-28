@@ -18,18 +18,17 @@
     "order": 1
   },
   {
-    "id": "interfaces-dashboard",
-    "slug": "interfaces-dashboard",
-    "category": "interfaces",
-    "title_ru": "Продуктовый дашборд",
-    "title_en": "Product Dashboard",
-    "summary_ru": "Интерфейсная система для сложного цифрового сценария с аккуратной визуальной иерархией.",
-    "summary_en": "An interface system for a complex digital flow with refined visual hierarchy.",
-    "cover": "assets/cases/interfaces-dashboard/cover.svg",
-    "year": "2024",
+    "id": "illustration-drive",
+    "slug": "illustration-drive",
+    "category": "illustration",
+    "title_ru": "Продуктовый вижуал 1C:Drive",
+    "title_en": "Product Visual 1C:Drive",
+    "summary_ru": "Продуктовый визуал для 1C:Drive, раскрывающий характер продукта через акцентную графику и ясную подачу.",
+    "summary_en": "Product visual for 1C:Drive, highlighting the product’s character through bold graphics and clear presentation.",
+    "cover": "assets/Frame 7.png",
+    "year": "2025",
     "gallery": [
-      "assets/cases/interfaces-dashboard/01.svg",
-      "assets/cases/interfaces-dashboard/02.svg"
+      "assets/1C_Drive.png"
     ],
     "order": 2
   },
