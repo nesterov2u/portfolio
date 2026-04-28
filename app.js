@@ -456,7 +456,7 @@ const renderHero = (home, ui, lang) => `
         <div class="hero-visual-wrap relative lg:pt-1">
           <div class="hero-visual-float accent-mix-ring relative z-[1] overflow-hidden rounded-[2rem] border border-white/60 bg-white p-3 shadow-glow">
             <img
-              class="h-[360px] w-full rounded-[1.4rem] object-cover md:h-[460px]"
+              class="h-[360px] w-full rounded-[1.4rem] bg-white object-cover md:h-[460px]"
               src="${assetUrl(home.hero.visual)}"
               alt=""
               loading="eager"
