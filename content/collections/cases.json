@@ -33,18 +33,17 @@
     "order": 2
   },
   {
-    "id": "branding-system",
-    "slug": "branding-system",
-    "category": "branding",
-    "title_ru": "Бренд-система",
-    "title_en": "Brand System",
-    "summary_ru": "Визуальная система бренда с акцентом на ясность, ритм и современный характер.",
-    "summary_en": "A brand system focused on clarity, rhythm, and a contemporary visual voice.",
-    "cover": "assets/cases/branding-system/cover.svg",
+    "id": "illustration-jet",
+    "slug": "illustration-jet",
+    "category": "illustration",
+    "title_ru": "Продуктовый вижуал 1C:Jet",
+    "title_en": "Product Visual 1C:Jet",
+    "summary_ru": "Продуктовый визуал для 1C:Jet с акцентом на характер продукта, динамику и выразительную подачу.",
+    "summary_en": "Product visual for 1C:Jet focused on the product’s character, dynamism, and expressive presentation.",
+    "cover": "assets/Frame 17.png",
     "year": "2023",
     "gallery": [
-      "assets/cases/branding-system/01.svg",
-      "assets/cases/branding-system/02.svg"
+      "assets/Frame 6.png"
     ],
     "order": 3
   },
