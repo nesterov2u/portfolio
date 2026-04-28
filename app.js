@@ -149,6 +149,7 @@ const resolveCategory = (categories, key) => {
   }
 
   return (
+    categories.find((entry) => entry.key === key) ||
     categories.find((entry) => entry.id === key) ||
     categories.find((entry) => entry.slug === key) ||
     null
@@ -499,7 +500,7 @@ const renderPortfolioSection = (home, categories, ui, lang) => `
           (category) => `
             <button
               class="${portfolioChipClass(false)}"
-              data-filter="${category.id}"
+              data-filter="${category.key || category.id}"
             >
               ${lang === "ru" ? category.title_ru : category.title_en}
             </button>
@@ -514,6 +515,7 @@ const renderPortfolioSection = (home, categories, ui, lang) => `
 const renderPortfolioCards = (categories, cases, ui, lang, filter) => {
   const categoryMap = new Map(
     categories.flatMap((item) => [
+      [item.key, item],
       [item.id, item],
       [item.slug, item]
     ])

@@ -425,6 +425,11 @@ content:
         format: json
         list: true
         fields:
+          - name: key
+            label: Category key
+            type: string
+            required: true
+            pattern: "^[a-z0-9-]+$"
           - name: id
             label: ID
             type: string
