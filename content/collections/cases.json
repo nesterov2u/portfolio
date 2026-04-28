@@ -78,21 +78,5 @@
       "assets/cases/packaging-concept/02.svg"
     ],
     "order": 5
-  },
-  {
-    "id": "motion-launch",
-    "slug": "motion-launch",
-    "category": "motion",
-    "title_ru": "Motion-кампания",
-    "title_en": "Motion Campaign",
-    "summary_ru": "Motion-визуалы для презентации продукта и усиления его визуального характера.",
-    "summary_en": "Motion visuals designed to present a product and amplify its visual character.",
-    "cover": "assets/cases/motion-launch/cover.svg",
-    "year": "2020",
-    "gallery": [
-      "assets/cases/motion-launch/01.svg",
-      "assets/cases/motion-launch/02.svg"
-    ],
-    "order": 6
   }
 ]
