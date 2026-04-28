@@ -48,5 +48,15 @@
     "summary_ru": "Motion и видео для презентации продукта, идеи или визуального характера бренда.",
     "summary_en": "Motion and video work for presenting a product, an idea, or a brand's visual character.",
     "order": 5
+  },
+  {
+    "key": "print",
+    "id": "print",
+    "slug": "print",
+    "title_ru": "Полиграфия",
+    "title_en": "Print",
+    "summary_ru": "Полиграфия для презентации бренда, продукта и коммуникации с аудиторией.\n",
+    "summary_en": "Print design for presenting a brand, product, and communication with the audience.",
+    "order": 6
   }
 ]
