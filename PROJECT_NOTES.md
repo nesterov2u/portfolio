@@ -121,3 +121,33 @@ If context is lost, provide the new chat with:
 3. Mention that `category.key` is the stable relation key.
 4. Mention that deploy is controlled by `.github/workflows/deploy-pages.yml`.
 5. Mention that media lives in `assets/` and CMS may create new filenames on upload.
+
+## New Chat Prompt
+
+Use this as a starting prompt in a new chat:
+
+```text
+Работаем с репозиторием nesterov2u/portfolio.
+
+Сначала прочитай PROJECT_NOTES.md в корне проекта и используй его как основной источник проектных инвариантов.
+Это статический bilingual portfolio site на GitHub Pages с редактированием через Pages CMS.
+
+Важно:
+- не ломай текущую CMS-структуру без явной необходимости;
+- category.key считай стабильным relation key;
+- case.category должен ссылаться на category.key;
+- .pages.yml учитывай как часть рабочей CMS-схемы;
+- deploy идёт через .github/workflows/deploy-pages.yml;
+- media хранятся в assets/, Pages CMS может создавать новые файлы вместо перезаписи старых;
+- если нужно исправить hero image, сначала проверь актуальный hero.visual в content/pages/home.json;
+- перед коммитами проверяй актуальный origin/main и аккуратно ребейзься поверх CMS-коммитов;
+- не делай git add . без необходимости;
+- не добавляй случайные untracked media-дубли;
+- если последний Deploy GitHub Pages run зелёный, старые cancelled/queued runs не считаются проблемой.
+
+Формат работы:
+- сначала коротко опиши, что проверяешь;
+- потом внеси изменения;
+- затем проверь результат;
+- если делаешь коммит, в конце дай GitHub summary: commit hash, что изменено, риски/ограничения.
+```
