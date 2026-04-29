@@ -29,6 +29,10 @@ jobs:
           cp index.html 404.html app.js styles.css _site/
           cp -R assets content _site/
 
+          if [ -d admin ]; then
+            cp -R admin _site/
+          fi
+
           if [ -f CNAME ]; then
             cp CNAME _site/
           fi

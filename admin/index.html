@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting to Pages CMS</title>
+    <meta http-equiv="refresh" content="0; url=https://app.pagescms.org/" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5fbff;
+        --panel: rgba(255, 255, 255, 0.9);
+        --text: #14161a;
+        --muted: #6f7882;
+        --line: rgba(20, 22, 26, 0.12);
+        --accent: #1fc4ee;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        font-family: Inter, system-ui, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 15% 20%, rgba(31, 196, 238, 0.18), transparent 28%),
+          radial-gradient(circle at 85% 80%, rgba(31, 196, 238, 0.14), transparent 26%),
+          linear-gradient(180deg, #eef8ff 0%, var(--bg) 45%, #f8fcff 100%);
+      }
+
+      main {
+        width: min(100%, 560px);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 20px 60px rgba(121, 183, 220, 0.14);
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 5vw, 40px);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+
+      p {
+        margin: 0 0 20px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 18px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 600;
+        background: #fff;
+      }
+
+      a:hover {
+        border-color: rgba(31, 196, 238, 0.45);
+        box-shadow: 0 0 0 6px rgba(31, 196, 238, 0.1);
+      }
+    </style>
+    <script>
+      window.location.replace("https://app.pagescms.org/");
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>Redirecting to Pages CMS</h1>
+      <p>
+        If the redirect does not happen automatically, open the Pages CMS app and select the
+        <strong>nesterov2u/portfolio</strong> repository after sign-in.
+      </p>
+      <a href="https://app.pagescms.org/">Open Pages CMS</a>
+    </main>
+  </body>
+</html>
