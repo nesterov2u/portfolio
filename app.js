@@ -109,22 +109,47 @@ const applyTheme = (theme = {}) => {
   root.style.setProperty("--color-accent-soft", accent);
 };
 
+const faviconTypeFor = (path = "") => {
+  if (path.endsWith(".svg")) {
+    return "image/svg+xml";
+  }
+
+  if (path.endsWith(".ico")) {
+    return "image/x-icon";
+  }
+
+  return "image/png";
+};
+
+const faviconHrefFor = (path) => {
+  const href = assetUrl(path);
+  const separator = href.includes("?") ? "&" : "?";
+
+  // Browsers cache favicons aggressively, so force a fresh fetch on each deploy/page load.
+  return `${href}${separator}v=${Date.now()}`;
+};
+
 const applySiteAssets = (site = {}) => {
   if (!site.favicon) {
     return;
   }
 
-  const href = assetUrl(site.favicon);
-  let icon = document.querySelector('link[rel="icon"]');
+  const href = faviconHrefFor(site.favicon);
+  const type = faviconTypeFor(site.favicon);
+  const iconRels = ["icon", "shortcut icon", "apple-touch-icon"];
 
-  if (!icon) {
-    icon = document.createElement("link");
-    icon.rel = "icon";
-    document.head.appendChild(icon);
-  }
+  iconRels.forEach((rel) => {
+    let icon = document.querySelector(`link[rel="${rel}"]`);
 
-  icon.type = site.favicon.endsWith(".svg") ? "image/svg+xml" : "image/png";
-  icon.href = href;
+    if (!icon) {
+      icon = document.createElement("link");
+      icon.rel = rel;
+      document.head.appendChild(icon);
+    }
+
+    icon.type = type;
+    icon.href = href;
+  });
 };
 
 const assetUrl = (path) => {
