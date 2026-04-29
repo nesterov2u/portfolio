@@ -8,55 +8,9 @@
       name="description"
       content="Product Designer with a multidisciplinary background in interfaces, branding, illustration, packaging, and motion."
     />
-    <link rel="icon" href="data:," />
-    <script>
-      (function bootstrapFavicon() {
-        const segments = window.location.pathname.split("/").filter(Boolean);
-        const base =
-          window.location.hostname.endsWith("github.io") && segments.length > 0
-            ? `/${segments[0]}`
-            : "";
-
-        const faviconTypeFor = (path) => {
-          if (path.endsWith(".svg")) {
-            return "image/svg+xml";
-          }
-
-          if (path.endsWith(".ico")) {
-            return "image/x-icon";
-          }
-
-          return "image/png";
-        };
-
-        const applyFavicon = (path) => {
-          if (!path) {
-            return;
-          }
-
-          const href = `${base}/${path.replace(/^\/+/, "")}?v=${Date.now()}`;
-          const type = faviconTypeFor(path);
-          const existingIcons = document.querySelectorAll(
-            'link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"]'
-          );
-
-          existingIcons.forEach((icon) => icon.remove());
-
-          ["icon", "shortcut icon", "apple-touch-icon"].forEach((rel) => {
-            const icon = document.createElement("link");
-            icon.rel = rel;
-            icon.type = type;
-            icon.href = href;
-            document.head.appendChild(icon);
-          });
-        };
-
-        fetch(`${base}/content/globals/site.json`)
-          .then((response) => (response.ok ? response.json() : null))
-          .then((site) => applyFavicon(site && site.favicon))
-          .catch(() => {});
-      })();
-    </script>
+    <link rel="icon" type="__FAVICON_TYPE__" href="__FAVICON_HREF__" />
+    <link rel="shortcut icon" type="__FAVICON_TYPE__" href="__FAVICON_HREF__" />
+    <link rel="apple-touch-icon" href="__FAVICON_HREF__" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

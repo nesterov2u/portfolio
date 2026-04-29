@@ -37,6 +37,42 @@ jobs:
             cp CNAME _site/
           fi
 
+      - name: Inject current favicon into HTML
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          root = Path(".")
+          site = json.loads((root / "content/globals/site.json").read_text(encoding="utf-8"))
+          favicon = site.get("favicon", "").lstrip("/")
+          if not favicon:
+              raise SystemExit("content/globals/site.json is missing favicon")
+
+          source = root / favicon
+          if not source.exists():
+              raise SystemExit(f"Favicon asset not found: {favicon}")
+
+          suffix = source.suffix.lower()
+          if suffix == ".svg":
+              mime = "image/svg+xml"
+          elif suffix == ".ico":
+              mime = "image/x-icon"
+          else:
+              mime = "image/png"
+
+          digest = hashlib.sha256(source.read_bytes()).hexdigest()[:12]
+          href = f"{favicon}?v={digest}"
+
+          for name in ("index.html", "404.html"):
+              path = root / "_site" / name
+              html = path.read_text(encoding="utf-8")
+              html = html.replace("__FAVICON_HREF__", href)
+              html = html.replace("__FAVICON_TYPE__", mime)
+              path.write_text(html, encoding="utf-8")
+          PY
+
       - name: Verify artifact
         run: |
           test -f _site/index.html
@@ -46,6 +82,8 @@ jobs:
           test -f _site/content/pages/home.json
           test -d _site/assets
           test -d _site/content
+          ! grep -q "__FAVICON_" _site/index.html
+          ! grep -q "__FAVICON_" _site/404.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4

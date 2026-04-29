@@ -90,6 +90,7 @@ content:
           - name: favicon
             label: Favicon
             type: image
+            required: true
             options:
               extensions: [svg, png, ico]
           - name: phone
