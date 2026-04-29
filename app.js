@@ -137,18 +137,19 @@ const applySiteAssets = (site = {}) => {
   const href = faviconHrefFor(site.favicon);
   const type = faviconTypeFor(site.favicon);
   const iconRels = ["icon", "shortcut icon", "apple-touch-icon"];
+  const existingIcons = document.querySelectorAll(
+    'link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"]'
+  );
+
+  existingIcons.forEach((icon) => icon.remove());
 
   iconRels.forEach((rel) => {
-    let icon = document.querySelector(`link[rel="${rel}"]`);
-
-    if (!icon) {
-      icon = document.createElement("link");
-      icon.rel = rel;
-      document.head.appendChild(icon);
-    }
+    const icon = document.createElement("link");
+    icon.rel = rel;
 
     icon.type = type;
     icon.href = href;
+    document.head.appendChild(icon);
   });
 };
 
