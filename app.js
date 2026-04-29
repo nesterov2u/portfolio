@@ -145,6 +145,61 @@ const textFor = (value, lang) => {
   return value[lang] || value.ru || value.en || "";
 };
 
+const siteNameFor = (site, lang) => (
+  lang === "ru"
+    ? site.site_name_ru || site.site_name
+    : site.site_name_en || site.site_name
+);
+
+const siteRoleFor = (site, lang) => (
+  lang === "ru"
+    ? site.role_ru || site.role_en || ""
+    : site.role_en || site.role_ru || ""
+);
+
+const ensureMetaDescription = () => {
+  let meta = document.querySelector('meta[name="description"]');
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.name = "description";
+    document.head.appendChild(meta);
+  }
+
+  return meta;
+};
+
+const applyPageMeta = (data, lang, route) => {
+  const { site, home, categories, cases, ui } = data;
+  const siteName = siteNameFor(site, lang);
+  const siteRole = siteRoleFor(site, lang);
+  const defaultDescription = textFor(home.hero?.text, lang) || siteRole;
+  let title = siteRole ? `${siteName} — ${siteRole}` : siteName;
+  let description = defaultDescription;
+
+  if (route.type === "case") {
+    const item = cases.find((entry) => entry.slug === route.slug);
+
+    if (item) {
+      const caseTitle = lang === "ru" ? item.title_ru : item.title_en;
+      const caseSummary = lang === "ru" ? item.summary_ru : item.summary_en;
+      const category = resolveCategory(categories, item.category);
+      const categoryName = category
+        ? (lang === "ru" ? category.title_ru : category.title_en)
+        : "";
+
+      title = `${caseTitle} — ${siteName}`;
+      description = caseSummary || categoryName || defaultDescription;
+    } else {
+      title = `${textFor(ui.labels.notFound, lang)} — ${siteName}`;
+      description = textFor(ui.labels.notFoundText, lang) || defaultDescription;
+    }
+  }
+
+  document.title = title;
+  ensureMetaDescription().content = description;
+};
+
 const resolveCategory = (categories, key) => {
   if (!Array.isArray(categories) || !key) {
     return null;
@@ -332,9 +387,7 @@ const portfolioChipClass = (active = false) =>
     : "filter-chip glass-edge rounded-full border bg-panel/88 px-5 py-3 text-base font-medium text-ink/66 hover:bg-panel hover:text-ink";
 
 const renderHeader = (site, navigation, ui, lang) => {
-  const siteName = lang === "ru"
-    ? site.site_name_ru || site.site_name
-    : site.site_name_en || site.site_name;
+  const siteName = siteNameFor(site, lang);
   const resolveNavHref = (href) =>
     href && href.startsWith("#") ? `${BASE_URL}/?lang=${lang}${href}` : href;
   const navItems = navigation.items
@@ -370,7 +423,7 @@ const renderHeader = (site, navigation, ui, lang) => {
       <div class="container-wide flex items-center justify-between gap-6 py-5">
         <a href="${BASE_URL}/?lang=${lang}" class="group flex flex-col">
           <span class="text-[1.18rem] font-semibold tracking-[-0.025em] md:text-[1.24rem]">${siteName}</span>
-          <span class="text-[0.88rem] text-ink/55 md:text-[0.92rem]">${lang === "ru" ? site.role_ru : site.role_en}</span>
+          <span class="text-[0.88rem] text-ink/55 md:text-[0.92rem]">${siteRoleFor(site, lang)}</span>
         </a>
         <div class="hidden items-center gap-8 md:flex">
           <nav class="flex items-center gap-6">${navItems}</nav>
@@ -962,6 +1015,7 @@ const mount = async () => {
     }
 
     document.documentElement.lang = state.lang;
+    applyPageMeta(data, state.lang, route);
     revealObserved();
     scrollToHashTarget();
   } catch (error) {
