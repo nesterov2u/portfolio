@@ -111,50 +111,6 @@ const applyTheme = (theme = {}) => {
   root.style.setProperty("--color-accent-soft", accent);
 };
 
-const faviconTypeFor = (path = "") => {
-  if (path.endsWith(".svg")) {
-    return "image/svg+xml";
-  }
-
-  if (path.endsWith(".ico")) {
-    return "image/x-icon";
-  }
-
-  return "image/png";
-};
-
-const faviconHrefFor = (path) => {
-  const href = assetUrl(path);
-  const separator = href.includes("?") ? "&" : "?";
-
-  // Browsers cache favicons aggressively, so force a fresh fetch on each deploy/page load.
-  return `${href}${separator}v=${Date.now()}`;
-};
-
-const applySiteAssets = (site = {}) => {
-  if (!site.favicon) {
-    return;
-  }
-
-  const href = faviconHrefFor(site.favicon);
-  const type = faviconTypeFor(site.favicon);
-  const iconRels = ["icon", "shortcut icon", "apple-touch-icon"];
-  const existingIcons = document.querySelectorAll(
-    'link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"]'
-  );
-
-  existingIcons.forEach((icon) => icon.remove());
-
-  iconRels.forEach((rel) => {
-    const icon = document.createElement("link");
-    icon.rel = rel;
-
-    icon.type = type;
-    icon.href = href;
-    document.head.appendChild(icon);
-  });
-};
-
 const assetUrl = (path) => {
   if (!path) {
     return "";
@@ -1121,7 +1077,6 @@ const mount = async () => {
     state.data = data;
     state.lang = detectLang(data.site);
     applyTheme(data.site.theme);
-    applySiteAssets(data.site);
 
     const route = routeInfo();
     if (route.type === "case") {
