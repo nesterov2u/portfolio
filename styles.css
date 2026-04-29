@@ -295,6 +295,16 @@ body {
   margin: 0;
 }
 
+.media-lazy {
+  background: rgba(238, 246, 251, 0.9);
+  opacity: 0.01;
+  transition: opacity 220ms ease;
+}
+
+.media-lazy.is-loaded {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
 }
 

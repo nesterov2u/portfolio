@@ -9,6 +9,8 @@ const GITHUB_PAGES_BASE = (() => {
 
 const BASE_URL = `${window.location.origin}${GITHUB_PAGES_BASE}`;
 const CONTENT_PATH = `${BASE_URL}/content`;
+const LAZY_IMAGE_PLACEHOLDER =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 10'%3E%3Crect width='16' height='10' fill='%23eef6fb'/%3E%3C/svg%3E";
 
 const state = {
   lang: null,
@@ -159,6 +161,96 @@ const assetUrl = (path) => {
   }
   const normalized = path.replace(/^\/+/, "");
   return `${BASE_URL}/${normalized}`;
+};
+
+let lazyImageObserver = null;
+
+const loadLazyImage = (img) => {
+  if (!img || !img.dataset.src || img.dataset.loaded === "true") {
+    return;
+  }
+
+  const source = img.dataset.src;
+  img.src = source;
+  img.dataset.loaded = "true";
+
+  const finalize = () => {
+    img.classList.add("is-loaded");
+    img.removeEventListener("load", finalize);
+    img.removeEventListener("error", finalize);
+  };
+
+  img.addEventListener("load", finalize);
+  img.addEventListener("error", finalize);
+};
+
+const ensureLazyImageObserver = () => {
+  if (lazyImageObserver || !("IntersectionObserver" in window)) {
+    return lazyImageObserver;
+  }
+
+  lazyImageObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        loadLazyImage(entry.target);
+        lazyImageObserver.unobserve(entry.target);
+      });
+    },
+    {
+      rootMargin: "320px 0px"
+    }
+  );
+
+  return lazyImageObserver;
+};
+
+const hydrateLazyImages = (root = document) => {
+  const images = root.querySelectorAll("img[data-src]");
+  if (!images.length) {
+    return;
+  }
+
+  const observer = ensureLazyImageObserver();
+
+  images.forEach((img) => {
+    if (!observer) {
+      loadLazyImage(img);
+      return;
+    }
+
+    observer.observe(img);
+  });
+};
+
+const renderImage = ({
+  src,
+  alt = "",
+  className = "",
+  loading = "lazy",
+  fetchpriority = "low",
+  decoding = "async",
+  eager = false
+}) => {
+  const resolvedSrc = assetUrl(src);
+  const lazyAttrs = eager
+    ? `src="${resolvedSrc}"`
+    : `src="${LAZY_IMAGE_PLACEHOLDER}" data-src="${resolvedSrc}" data-loaded="false"`;
+  const lazyClass = eager ? "" : " media-lazy";
+
+  return `
+    <img
+      class="${className}${lazyClass}"
+      ${lazyAttrs}
+      alt="${alt}"
+      loading="${loading}"
+      fetchpriority="${fetchpriority}"
+      decoding="${decoding}"
+    />
+  `;
 };
 
 const textFor = (value, lang) => {
@@ -534,14 +626,14 @@ const renderHero = (home, ui, lang) => `
         </div>
         <div class="hero-visual-wrap relative lg:pt-1">
           <div class="hero-visual-float accent-mix-ring relative z-[1] overflow-hidden rounded-[2rem] border border-white/60 bg-white p-3 shadow-glow">
-            <img
-              class="h-[360px] w-full rounded-[1.4rem] bg-white object-cover md:h-[460px]"
-              src="${assetUrl(home.hero.visual)}"
-              alt=""
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-            />
+            ${renderImage({
+              src: home.hero.visual,
+              alt: "",
+              className: "h-[360px] w-full rounded-[1.4rem] bg-white object-cover md:h-[460px]",
+              loading: "eager",
+              fetchpriority: "high",
+              eager: true
+            })}
           </div>
         </div>
       </div>
@@ -665,14 +757,13 @@ const renderPortfolioCards = (categories, cases, ui, lang, filter) => {
           class="section-reveal card-tilt glass-edge group flex h-full flex-col overflow-hidden rounded-[1.8rem] border bg-white/80 ${wideClass}"
         >
           <div class="overflow-hidden">
-            <img
-              class="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-72"
-              src="${assetUrl(item.cover)}"
-              alt="${title}"
-              loading="lazy"
-              fetchpriority="low"
-              decoding="async"
-            />
+            ${renderImage({
+              src: item.cover,
+              alt: title,
+              className: "h-64 w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-72",
+              loading: "lazy",
+              fetchpriority: "low"
+            })}
           </div>
           <div class="flex flex-1 flex-col gap-3 p-5 md:p-6">
             <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-ink/45">${categoryName}</p>
@@ -879,14 +970,14 @@ const renderCase = (data, lang, slug) => {
             </div>
           </div>
           <div class="glass-edge overflow-hidden rounded-[1.6rem] border bg-panel">
-            <img
-              class="h-[320px] w-full object-cover md:h-[460px]"
-              src="${assetUrl(item.cover)}"
-              alt="${title}"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-            />
+            ${renderImage({
+              src: item.cover,
+              alt: title,
+              className: "h-[320px] w-full object-cover md:h-[460px]",
+              loading: "eager",
+              fetchpriority: "high",
+              eager: true
+            })}
           </div>
         </div>
       </section>
@@ -899,14 +990,13 @@ const renderCase = (data, lang, slug) => {
                   .map(
                     (image, index) => `
                       <figure class="card-tilt glass-edge overflow-hidden rounded-[1.8rem] border bg-white/78">
-                        <img
-                          class="h-[280px] w-full object-cover md:h-[380px]"
-                          src="${assetUrl(image)}"
-                          alt="${title} ${index + 1}"
-                          loading="lazy"
-                          fetchpriority="low"
-                          decoding="async"
-                        />
+                        ${renderImage({
+                          src: image,
+                          alt: `${title} ${index + 1}`,
+                          className: "h-[280px] w-full object-cover md:h-[380px]",
+                          loading: "lazy",
+                          fetchpriority: "low"
+                        })}
                       </figure>
                     `
                   )
@@ -933,6 +1023,7 @@ const wireInteractions = (categories, cases, ui, lang) => {
     state.activeCategory = filter;
     grid.innerHTML = renderPortfolioCards(categories, cases, ui, lang, filter);
     revealObserved();
+    hydrateLazyImages(grid);
   };
 
   filters.addEventListener("click", (event) => {
@@ -1043,6 +1134,7 @@ const mount = async () => {
     document.documentElement.lang = state.lang;
     applyPageMeta(data, state.lang, route);
     revealObserved();
+    hydrateLazyImages(app);
     scrollToHashTarget();
   } catch (error) {
     console.error(error);
