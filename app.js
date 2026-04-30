@@ -607,7 +607,7 @@ const renderProofPoints = (points, lang) => `
               <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-ink/10 bg-panel">
                 ${renderProofIcon(point)}
               </div>
-              <p class="text-sm font-medium leading-6 text-ink/78">${textFor(point, lang)}</p>
+              <p class="text-sm font-semibold leading-6 text-ink/82">${textFor(point, lang)}</p>
             </div>
           `
         )

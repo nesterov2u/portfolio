@@ -11,6 +11,27 @@
     <link rel="icon" type="__FAVICON_TYPE__" href="__FAVICON_HREF__" />
     <link rel="shortcut icon" type="__FAVICON_TYPE__" href="__FAVICON_HREF__" />
     <link rel="apple-touch-icon" href="__FAVICON_HREF__" />
+    <script>
+      (function normalizeFaviconLinks() {
+        const segments = window.location.pathname.split("/").filter(Boolean);
+        const base =
+          window.location.hostname.endsWith("github.io") && segments.length > 0
+            ? `/${segments[0]}`
+            : "";
+
+        document
+          .querySelectorAll('link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"]')
+          .forEach((link) => {
+            const href = link.getAttribute("href");
+
+            if (!href || href.startsWith("/") || href.startsWith("data:") || /^https?:/i.test(href)) {
+              return;
+            }
+
+            link.href = `${base}/${href.replace(/^\/+/, "")}`;
+          });
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
