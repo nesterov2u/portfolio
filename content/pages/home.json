@@ -36,6 +36,7 @@
     {
       "id": "lead",
       "icon": "lead",
+      "icon_asset": "assets/013-48x48.svg",
       "ru": "5 лет в lead-роли",
       "en": "5 years in lead roles"
     },
