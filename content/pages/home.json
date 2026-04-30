@@ -30,28 +30,24 @@
     {
       "id": "years",
       "icon": "spark",
-      "icon_asset": "assets/noun-storage-3959581.svg",
       "ru": "15+ лет в дизайне",
       "en": "15+ years in design"
     },
     {
       "id": "lead",
       "icon": "lead",
-      "icon_asset": "assets/noun-star-3959582.svg",
       "ru": "5 лет в lead-роли",
       "en": "5 years in lead roles"
     },
     {
       "id": "intl",
       "icon": "globe",
-      "icon_asset": "assets/noun-reshape-3959600.svg",
       "ru": "Международный IT-опыт",
       "en": "International IT experience"
     },
     {
       "id": "range",
       "icon": "grid",
-      "icon_asset": "assets/noun-user-post-3959605.svg",
       "ru": "Интерфейсы, брендинг, иллюстрация, упаковка, motion",
       "en": "Interfaces, branding, illustration, packaging, motion"
     }
