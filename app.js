@@ -804,25 +804,23 @@ const renderContacts = (home, site, ui, lang) => {
               .map(
                 (item) => `
                   <a
-                    class="group flex items-center justify-between rounded-[1.35rem] border border-white/10 bg-white/[0.07] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition hover:border-white/18 hover:bg-white/[0.11]"
+                    class="group grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2.5 rounded-[1.25rem] border border-white/10 bg-white/[0.07] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition hover:border-white/18 hover:bg-white/[0.11] sm:flex sm:items-center sm:justify-between sm:gap-3 sm:rounded-[1.35rem] sm:px-4 sm:py-4"
                     href="${item.href}"
                     target="${item.href.startsWith("http") ? "_blank" : "_self"}"
                     rel="${item.href.startsWith("http") ? "noreferrer" : ""}"
                   >
-                    <div class="flex min-w-0 items-center gap-3">
-                      <span class="flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.06] text-white/92 transition group-hover:border-white/20 group-hover:bg-white/[0.1]">
-                        ${contactIcon(item.id)}
-                      </span>
-                      <div class="min-w-0">
-                        <span class="block text-[0.72rem] font-medium uppercase tracking-[0.16em] text-white/45">${textFor(
-                          ui.labels[item.id],
-                          lang
-                        )}</span>
-                        <span class="mt-1 block truncate text-sm font-semibold text-white/95 md:text-base">${item.value}</span>
-                      </div>
+                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/12 bg-white/[0.06] text-white/92 transition group-hover:border-white/20 group-hover:bg-white/[0.1] sm:h-11 sm:w-11">
+                      ${contactIcon(item.id)}
+                    </span>
+                    <div class="min-w-0">
+                      <span class="block text-[0.68rem] font-medium uppercase tracking-[0.14em] text-white/45 sm:text-[0.72rem] sm:tracking-[0.16em]">${textFor(
+                        ui.labels[item.id],
+                        lang
+                      )}</span>
+                      <span class="mt-1 block break-all text-[0.8rem] leading-[1.25] font-semibold text-white/95 sm:break-words sm:text-base sm:leading-[1.3]">${item.value}</span>
                     </div>
-                    <span class="ml-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white/74 transition group-hover:border-white/18 group-hover:text-white">
-                      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white/74 transition group-hover:border-white/18 group-hover:text-white sm:h-10 sm:w-10">
+                      <svg class="h-3.5 w-3.5 sm:h-4 sm:w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M7 17L17 7"></path>
                         <path d="M9 7h8v8"></path>
                       </svg>
