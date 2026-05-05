@@ -804,7 +804,7 @@ const renderContacts = (home, site, ui, lang) => {
               .map(
                 (item) => `
                   <a
-                    class="group grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2.5 rounded-[1.25rem] border border-white/10 bg-white/[0.07] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition hover:border-white/18 hover:bg-white/[0.11] sm:flex sm:items-center sm:justify-between sm:gap-3 sm:rounded-[1.35rem] sm:px-4 sm:py-4"
+                    class="group grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2.5 rounded-[1.25rem] border border-white/10 bg-white/[0.07] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition hover:border-white/18 hover:bg-white/[0.11] sm:gap-3 sm:rounded-[1.35rem] sm:px-4 sm:py-4"
                     href="${item.href}"
                     target="${item.href.startsWith("http") ? "_blank" : "_self"}"
                     rel="${item.href.startsWith("http") ? "noreferrer" : ""}"
