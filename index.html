@@ -38,32 +38,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              ink: "rgb(var(--color-ink) / <alpha-value>)",
-              paper: "rgb(var(--color-paper) / <alpha-value>)",
-              panel: "rgb(var(--color-panel) / <alpha-value>)",
-              line: "rgb(var(--color-line) / <alpha-value>)",
-              accent: "rgb(var(--color-accent) / <alpha-value>)",
-              accentSoft: "rgb(var(--color-accent-soft) / <alpha-value>)",
-              ember: "rgb(var(--color-accent) / <alpha-value>)",
-              emberSoft: "rgb(var(--color-accent-soft) / <alpha-value>)"
-            },
-            fontFamily: {
-              display: ["Unbounded", "sans-serif"],
-              body: ["Manrope", "sans-serif"]
-            },
-            boxShadow: {
-              glow: "0 32px 80px rgba(20, 216, 255, 0.18)"
-            }
-          }
-        }
-      };
-    </script>
+    <link rel="stylesheet" href="tailwind.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="bg-paper text-ink font-body">

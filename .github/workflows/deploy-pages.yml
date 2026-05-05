@@ -26,7 +26,7 @@ jobs:
       - name: Prepare static artifact
         run: |
           mkdir -p _site
-          cp index.html 404.html app.js styles.css _site/
+          cp index.html 404.html app.js tailwind.css styles.css _site/
           cp -R assets content _site/
 
           if [ -d admin ]; then
@@ -78,6 +78,7 @@ jobs:
           test -f _site/index.html
           test -f _site/404.html
           test -f _site/app.js
+          test -f _site/tailwind.css
           test -f _site/styles.css
           test -f _site/content/pages/home.json
           test -d _site/assets
