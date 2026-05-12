@@ -31,6 +31,77 @@
             link.href = `${base}/${href.replace(/^\/+/, "")}`;
           });
       })();
+
+      (function refreshFaviconFromContent() {
+        const segments = window.location.pathname.split("/").filter(Boolean);
+        const base =
+          window.location.hostname.endsWith("github.io") && segments.length > 0
+            ? `/${segments[0]}`
+            : "";
+        const cacheKey = Date.now();
+
+        const iconTypeFor = (path) => {
+          const cleanPath = path.split("?")[0].toLowerCase();
+
+          if (cleanPath.endsWith(".svg")) {
+            return "image/svg+xml";
+          }
+
+          if (cleanPath.endsWith(".ico")) {
+            return "image/x-icon";
+          }
+
+          return "image/png";
+        };
+
+        const resolveAsset = (path) => {
+          if (!path || path.startsWith("data:") || /^https?:/i.test(path)) {
+            return path;
+          }
+
+          if (path.startsWith("/")) {
+            return path;
+          }
+
+          return `${base}/${path.replace(/^\/+/, "")}`;
+        };
+
+        const versionAsset = (path) => `${path}${path.includes("?") ? "&" : "?"}v=${cacheKey}`;
+
+        const setIcon = (rel, href, type) => {
+          let link = document.querySelector(`link[rel="${rel}"]`);
+
+          if (!link) {
+            link = document.createElement("link");
+            link.rel = rel;
+            document.head.appendChild(link);
+          }
+
+          if (type) {
+            link.type = type;
+          } else {
+            link.removeAttribute("type");
+          }
+
+          link.href = href;
+        };
+
+        fetch(`${base}/content/globals/site.json?v=${cacheKey}`, { cache: "no-store" })
+          .then((response) => (response.ok ? response.json() : null))
+          .then((site) => {
+            if (!site || !site.favicon) {
+              return;
+            }
+
+            const href = versionAsset(resolveAsset(site.favicon));
+            const type = iconTypeFor(site.favicon);
+
+            setIcon("icon", href, type);
+            setIcon("shortcut icon", href, type);
+            setIcon("apple-touch-icon", href, "");
+          })
+          .catch(() => {});
+      })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
