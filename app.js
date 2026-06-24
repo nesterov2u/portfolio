@@ -909,7 +909,7 @@ const renderCase = (data, lang, slug) => {
             <path d="M9 7h8v8"></path>
           </svg>
         </a>
-        <div class="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-end">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
           <div class="max-w-xl">
             <p class="mb-5 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-ink/45">${categoryName}</p>
             <h1 class="font-display text-[2.6rem] leading-[0.98] tracking-[-0.035em] md:text-[4rem]">${title}</h1>
@@ -923,11 +923,11 @@ const renderCase = (data, lang, slug) => {
               }
             </div>
           </div>
-          <div class="glass-edge overflow-hidden rounded-[1.6rem] border bg-panel">
+          <div class="case-cover-frame glass-edge overflow-hidden rounded-[1.6rem] border bg-panel">
             ${renderImage({
               src: item.cover,
               alt: title,
-              className: "h-[320px] w-full object-cover md:h-[460px]",
+              className: "h-full w-full object-cover",
               loading: "eager",
               fetchpriority: "high",
               eager: true
