@@ -702,7 +702,6 @@ const renderPortfolioCards = (categories, cases, ui, lang, filter) => {
         ? (lang === "ru" ? category.title_ru : category.title_en)
         : item.category;
       const title = lang === "ru" ? item.title_ru : item.title_en;
-      const summary = lang === "ru" ? item.summary_ru : item.summary_en;
       const wideClass = index === 0 ? "md:col-span-2 2xl:col-span-2" : "";
 
       return `
@@ -722,7 +721,6 @@ const renderPortfolioCards = (categories, cases, ui, lang, filter) => {
           <div class="flex flex-1 flex-col gap-3 p-5 md:p-6">
             <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-ink/45">${categoryName}</p>
             <h3 class="text-[1.32rem] font-normal tracking-[-0.025em] md:text-[1.48rem]">${title}</h3>
-            <p class="cms-text max-w-xl text-sm leading-7 text-ink/72 md:text-base">${summary}</p>
             <div class="mt-auto flex items-center justify-between pt-4">
               <span class="inline-flex items-center gap-2 text-sm font-semibold text-ink">
                 <span>${textFor(ui.labels.openCase, lang)}</span>
