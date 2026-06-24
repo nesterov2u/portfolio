@@ -161,6 +161,10 @@ body {
   aspect-ratio: 16 / 9;
 }
 
+.case-gallery-frame {
+  aspect-ratio: 1 / 1;
+}
+
 .glass-edge {
   border-color: rgb(var(--color-line) / 0.85);
   box-shadow:

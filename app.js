@@ -943,11 +943,11 @@ const renderCase = (data, lang, slug) => {
                 ${item.gallery
                   .map(
                     (image, index) => `
-                      <figure class="card-tilt glass-edge overflow-hidden rounded-[1.8rem] border bg-white/78">
+                      <figure class="case-gallery-frame card-tilt glass-edge overflow-hidden rounded-[1.8rem] border bg-white/78">
                         ${renderImage({
                           src: image,
                           alt: `${title} ${index + 1}`,
-                          className: "h-[280px] w-full object-cover md:h-[380px]",
+                          className: "h-full w-full object-cover",
                           loading: "lazy",
                           fetchpriority: "low"
                         })}
