@@ -617,11 +617,6 @@ const renderProofPoints = (points, lang) => `
 const renderFocus = (home, lang) => `
   <section id="focus" class="container-wide py-20 md:py-28">
     <div class="section-reveal relative isolate overflow-hidden rounded-[2.4rem] border border-white/8 bg-ink px-6 py-8 text-white shadow-[0_20px_60px_rgba(7,14,24,0.16)] md:px-8 md:py-10 lg:px-10">
-      <div class="focus-neon opacity-100">
-        <div class="focus-neon-orb focus-neon-orb-a"></div>
-        <div class="focus-neon-orb focus-neon-orb-b"></div>
-        <div class="focus-neon-orb focus-neon-orb-c"></div>
-      </div>
       <div class="grid gap-8 md:grid-cols-[340px_minmax(0,1fr)] md:items-start">
       <div>
         <p class="mb-3 font-display text-[1.28rem] leading-none tracking-[-0.03em] text-white/82 md:text-[1.62rem]">${textFor(
