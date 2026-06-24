@@ -451,7 +451,7 @@ const createSectionIntro = (title, intro) => `
     <div>
       <p class="mb-3 font-display text-[1.24rem] leading-none tracking-[-0.03em] text-ink/62 md:text-[1.56rem]">${title}</p>
     </div>
-    <p class="max-w-2xl text-base leading-7 text-ink/70 md:text-lg">${intro}</p>
+    <p class="cms-text max-w-2xl text-base leading-7 text-ink/70 md:text-lg">${intro}</p>
   </div>
 `;
 
@@ -556,9 +556,7 @@ const renderHero = (home, ui, lang) => `
             </h1>
           </div>
           <div class="flex max-w-xl flex-col gap-7">
-            <p class="max-w-xl text-[0.95rem] leading-[1.8] text-ink/72 sm:text-base sm:leading-7 md:text-lg">
-              ${textFor(home.hero.text, lang)}
-            </p>
+            <p class="cms-text max-w-xl text-[0.95rem] leading-[1.8] text-ink/72 sm:text-base sm:leading-7 md:text-lg">${textFor(home.hero.text, lang)}</p>
             <div class="flex flex-wrap gap-3">
               ${home.hero.actions
                 .map((action) => {
@@ -631,7 +629,7 @@ const renderFocus = (home, lang) => `
           lang
         )}</p>
       </div>
-        <p class="max-w-3xl text-base leading-8 text-white/74 md:text-lg">${textFor(home.focus.intro, lang)}</p>
+        <p class="cms-text max-w-3xl text-base leading-8 text-white/74 md:text-lg">${textFor(home.focus.intro, lang)}</p>
       </div>
       <div class="relative z-[1] mt-10 grid gap-4 md:grid-cols-2">
         ${home.focus.items
@@ -642,7 +640,7 @@ const renderFocus = (home, lang) => `
                   ${renderFocusIcon(item)}
                   <span>${textFor(item.title, lang)}</span>
                 </div>
-                <p class="mt-5 max-w-xl text-base leading-7 text-white/92 md:text-[1.02rem]">${textFor(item.text, lang)}</p>
+                <p class="cms-text mt-5 max-w-xl text-base leading-7 text-white/92 md:text-[1.02rem]">${textFor(item.text, lang)}</p>
               </article>
             `
           )
@@ -724,7 +722,7 @@ const renderPortfolioCards = (categories, cases, ui, lang, filter) => {
           <div class="flex flex-1 flex-col gap-3 p-5 md:p-6">
             <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-ink/45">${categoryName}</p>
             <h3 class="text-[1.32rem] font-normal tracking-[-0.025em] md:text-[1.48rem]">${title}</h3>
-            <p class="max-w-xl text-sm leading-7 text-ink/72 md:text-base">${summary}</p>
+            <p class="cms-text max-w-xl text-sm leading-7 text-ink/72 md:text-base">${summary}</p>
             <div class="mt-auto flex items-center justify-between pt-4">
               <span class="inline-flex items-center gap-2 text-sm font-semibold text-ink">
                 <span>${textFor(ui.labels.openCase, lang)}</span>
@@ -753,7 +751,7 @@ const renderAbout = (home, lang) => `
       </div>
       <div class="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
         <div class="space-y-6 text-base leading-8 text-ink/72 md:text-lg">
-          ${home.about.paragraphs.map((paragraph) => `<p>${textFor(paragraph, lang)}</p>`).join("")}
+          ${home.about.paragraphs.map((paragraph) => `<p class="cms-text">${textFor(paragraph, lang)}</p>`).join("")}
         </div>
         <div class="glass-edge rounded-[1.8rem] border bg-white/72 p-6 md:p-7">
           <p class="mb-5 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-ink/50">
@@ -795,9 +793,7 @@ const renderContacts = (home, site, ui, lang) => {
             <p class="mb-5 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-white/45">
               ${textFor(home.contact.title, lang)}
             </p>
-            <h2 class="max-w-3xl font-display text-[2.5rem] leading-[0.98] tracking-[-0.05em] md:text-[3.9rem]">
-              ${textFor(home.contact.text, lang)}
-            </h2>
+            <h2 class="cms-text max-w-3xl font-display text-[2.5rem] leading-[0.98] tracking-[-0.05em] md:text-[3.9rem]">${textFor(home.contact.text, lang)}</h2>
           </div>
           <div class="grid gap-3 self-end">
             ${links
@@ -880,7 +876,7 @@ const renderCase = (data, lang, slug) => {
             lang
           )}</p>
           <h1 class="font-display text-4xl tracking-[-0.05em] md:text-6xl">${textFor(ui.labels.notFound, lang)}</h1>
-          <p class="mt-5 max-w-xl text-base leading-7 text-ink/70">${textFor(ui.labels.notFoundText, lang)}</p>
+          <p class="cms-text mt-5 max-w-xl text-base leading-7 text-ink/70">${textFor(ui.labels.notFoundText, lang)}</p>
           <a class="mt-8 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white" href="${portfolioHref(lang)}">
             <span>${textFor(ui.labels.backToPortfolio, lang)}</span>
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -913,7 +909,7 @@ const renderCase = (data, lang, slug) => {
           <div class="max-w-xl">
             <p class="mb-5 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-ink/45">${categoryName}</p>
             <h1 class="font-display text-[2.6rem] leading-[0.98] tracking-[-0.035em] md:text-[4rem]">${title}</h1>
-            <p class="mt-6 text-base leading-7 text-ink/72 md:text-lg">${summary}</p>
+            <p class="cms-text mt-6 text-base leading-7 text-ink/72 md:text-lg">${summary}</p>
             <div class="mt-8 flex flex-wrap gap-3">
               ${item.year ? `<div class="rounded-full border border-accent/20 bg-accentSoft px-4 py-2 text-sm font-semibold text-white">${item.year}</div>` : ""}
               ${

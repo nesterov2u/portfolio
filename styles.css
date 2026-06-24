@@ -165,6 +165,10 @@ body {
   aspect-ratio: 1 / 1;
 }
 
+.cms-text {
+  white-space: pre-wrap;
+}
+
 .glass-edge {
   border-color: rgb(var(--color-line) / 0.85);
   box-shadow:
