@@ -149,6 +149,16 @@ body {
   background: linear-gradient(90deg, rgba(17, 17, 17, 0.1), rgba(17, 17, 17, 0.03));
 }
 
+@media (min-width: 768px) {
+  .home-focus-section {
+    padding-bottom: 5rem;
+  }
+
+  .home-portfolio-section {
+    padding-top: 5rem;
+  }
+}
+
 .accent-mix-ring {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.85),

@@ -615,7 +615,7 @@ const renderProofPoints = (points, lang) => `
 `;
 
 const renderFocus = (home, lang) => `
-  <section id="focus" class="container-wide py-20 md:py-28">
+  <section id="focus" class="home-focus-section container-wide py-20 md:py-28">
     <div class="section-reveal relative isolate overflow-hidden rounded-[2.4rem] border border-white/8 bg-ink px-6 py-8 text-white shadow-[0_20px_60px_rgba(7,14,24,0.16)] md:px-8 md:py-10 lg:px-10">
       <div class="grid gap-8 md:grid-cols-[340px_minmax(0,1fr)] md:items-start">
       <div>
@@ -646,7 +646,7 @@ const renderFocus = (home, lang) => `
 `;
 
 const renderPortfolioSection = (home, categories, ui, lang) => `
-  <section id="portfolio" class="container-wide py-20 md:py-28">
+  <section id="portfolio" class="home-portfolio-section container-wide py-20 md:py-28">
     ${createSectionIntro(textFor(home.portfolio.title, lang), textFor(home.portfolio.intro, lang))}
     <div class="mt-10 flex flex-wrap gap-3 section-reveal" id="portfolio-filters">
       <button class="${portfolioChipClass(true)}" data-filter="all">
