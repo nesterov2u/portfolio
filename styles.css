@@ -56,6 +56,21 @@ body {
   padding-right: max(var(--gutter-copy), env(safe-area-inset-right));
 }
 
+.case-page-main {
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.case-back-link {
+  margin-bottom: 2.25rem;
+}
+
+@media (min-width: 768px) {
+  .case-page-main {
+    padding-top: 3.5rem;
+  }
+}
+
 .grain::before {
   content: "";
   position: absolute;

@@ -889,9 +889,9 @@ const renderCase = (data, lang, slug) => {
 
   return `
     ${renderHeader(site, navigation, ui, lang)}
-    <main class="container-wide py-14 md:py-22">
+    <main class="case-page-main container-wide py-14 md:py-22">
       <section class="section-reveal glass-edge overflow-hidden rounded-[2rem] border bg-white/78 p-6 md:p-8">
-        <a class="mb-8 inline-flex items-center gap-2 rounded-full border border-ink/10 px-4 py-2 text-sm font-semibold transition hover:border-accent hover:bg-accentSoft" href="${portfolioHref(lang)}">
+        <a class="case-back-link mb-8 inline-flex items-center gap-2 rounded-full border border-ink/10 px-4 py-2 text-sm font-semibold transition hover:border-accent hover:bg-accentSoft" href="${portfolioHref(lang)}">
           <span>${textFor(ui.labels.backToPortfolio, lang)}</span>
           <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M7 17L17 7"></path>
