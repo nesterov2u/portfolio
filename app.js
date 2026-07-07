@@ -631,7 +631,7 @@ const renderFocus = (home, lang) => `
           .map(
             (item) => `
               <article class="section-reveal focus-card rounded-[1.7rem] border bg-white p-6 md:p-7">
-                <div class="inline-flex items-center gap-2 rounded-full border border-ink/12 bg-panel px-3.5 py-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-ink md:text-[0.82rem]">
+                <div class="focus-card-label inline-flex items-center gap-2 rounded-full border border-ink/12 bg-panel px-3.5 py-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-ink md:text-[0.82rem]">
                   ${renderFocusIcon(item)}
                   <span>${textFor(item.title, lang)}</span>
                 </div>

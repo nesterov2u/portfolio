@@ -220,6 +220,10 @@ body {
   color: rgb(var(--color-ink));
 }
 
+.focus-card-label {
+  font-weight: 700;
+}
+
 .focus-card-body {
   color: rgb(var(--color-ink) / 0.76);
 }
