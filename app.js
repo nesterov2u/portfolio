@@ -901,8 +901,8 @@ const renderCase = (data, lang, slug) => {
         <div class="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
           <div class="max-w-xl">
             <p class="mb-5 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-ink/45">${categoryName}</p>
-            <h1 class="font-display text-[2.6rem] leading-[0.98] tracking-[-0.035em] md:text-[4rem]">${title}</h1>
-            <p class="cms-text mt-6 text-base leading-7 text-ink/72 md:text-lg">${summary}</p>
+            <h1 class="case-title font-display tracking-[-0.035em]">${title}</h1>
+            <p class="case-summary cms-text text-base leading-7 text-ink/72 md:text-lg">${summary}</p>
             <div class="mt-8 flex flex-wrap gap-3">
               ${item.year ? `<div class="rounded-full border border-accent/20 bg-accentSoft px-4 py-2 text-sm font-semibold text-white">${item.year}</div>` : ""}
               ${

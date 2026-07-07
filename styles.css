@@ -65,6 +65,15 @@ body {
   margin-bottom: 2.25rem;
 }
 
+.case-title {
+  font-size: 2.95rem;
+  line-height: 0.96;
+}
+
+.case-summary {
+  margin-top: 2rem;
+}
+
 .case-gallery-section {
   padding-top: 3rem;
 }
@@ -72,6 +81,15 @@ body {
 @media (min-width: 768px) {
   .case-page-main {
     padding-top: 3.5rem;
+  }
+
+  .case-title {
+    font-size: 4rem;
+    line-height: 0.98;
+  }
+
+  .case-summary {
+    margin-top: 1.5rem;
   }
 
   .case-gallery-section {
