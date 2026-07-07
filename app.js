@@ -635,7 +635,7 @@ const renderFocus = (home, lang) => `
                   ${renderFocusIcon(item)}
                   <span>${textFor(item.title, lang)}</span>
                 </div>
-                <p class="cms-text mt-5 max-w-xl text-base leading-7 text-ink/76 md:text-[1.02rem]">${textFor(item.text, lang)}</p>
+                <p class="focus-card-body cms-text mt-5 max-w-xl text-base leading-7 md:text-[1.02rem]">${textFor(item.text, lang)}</p>
               </article>
             `
           )

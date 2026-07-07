@@ -220,6 +220,10 @@ body {
   color: rgb(var(--color-ink));
 }
 
+.focus-card-body {
+  color: rgb(var(--color-ink) / 0.76);
+}
+
 .hero-visual-wrap {
   position: relative;
   isolation: isolate;
