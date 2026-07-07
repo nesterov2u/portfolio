@@ -601,7 +601,7 @@ const renderProofPoints = (points, lang) => `
       ${points
         .map(
           (point) => `
-            <div class="glass-edge rounded-[1.4rem] border bg-white/65 px-5 py-4 backdrop-blur-sm">
+            <div class="glass-edge rounded-[1.4rem] border bg-white/65 px-6 py-4 backdrop-blur-sm md:px-10">
               <div class="mb-4 flex text-ink">
                 ${renderProofIcon(point)}
               </div>
