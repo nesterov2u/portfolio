@@ -927,7 +927,7 @@ const renderCase = (data, lang, slug) => {
       ${
         Array.isArray(item.gallery) && item.gallery.length > 0
           ? `
-            <section class="py-14 md:py-22">
+            <section class="case-gallery-section py-14 md:py-22">
               <div class="section-reveal grid gap-5 md:grid-cols-2">
                 ${item.gallery
                   .map(

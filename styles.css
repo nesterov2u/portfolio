@@ -65,8 +65,16 @@ body {
   margin-bottom: 2.25rem;
 }
 
+.case-gallery-section {
+  padding-top: 5rem;
+}
+
 @media (min-width: 768px) {
   .case-page-main {
+    padding-top: 3.5rem;
+  }
+
+  .case-gallery-section {
     padding-top: 3.5rem;
   }
 }
