@@ -10,7 +10,10 @@
     "cover": "assets/Summit-Cover.png",
     "year": "2024",
     "gallery": [
-      "assets/1-1.png"
+      "assets/1.png",
+      "assets/2-1.png",
+      "assets/3.png",
+      "assets/4.png"
     ],
     "order": 1
   },
