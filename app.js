@@ -630,12 +630,12 @@ const renderFocus = (home, lang) => `
         ${home.focus.items
           .map(
             (item) => `
-              <article class="section-reveal focus-glass-card rounded-[1.7rem] border bg-[rgba(19,23,28,0.72)] p-6 backdrop-blur-md md:p-7">
-                <div class="inline-flex items-center gap-2 rounded-full border border-white/18 bg-white/12 px-3.5 py-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-white md:text-[0.82rem]">
+              <article class="section-reveal focus-card rounded-[1.7rem] border bg-white p-6 md:p-7">
+                <div class="inline-flex items-center gap-2 rounded-full border border-ink/12 bg-panel px-3.5 py-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-ink md:text-[0.82rem]">
                   ${renderFocusIcon(item)}
                   <span>${textFor(item.title, lang)}</span>
                 </div>
-                <p class="cms-text mt-5 max-w-xl text-base leading-7 text-white/92 md:text-[1.02rem]">${textFor(item.text, lang)}</p>
+                <p class="cms-text mt-5 max-w-xl text-base leading-7 text-ink/76 md:text-[1.02rem]">${textFor(item.text, lang)}</p>
               </article>
             `
           )
