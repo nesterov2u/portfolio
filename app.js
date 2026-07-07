@@ -496,7 +496,7 @@ const renderHeader = (site, navigation, ui, lang) => {
     <header class="sticky top-0 z-40 border-b border-line/70 bg-paper/85 backdrop-blur-md">
       <div class="container-wide flex items-center justify-between gap-6 py-5">
         <a href="${BASE_URL}/?lang=${lang}" class="group flex flex-col">
-          <span class="text-[1.18rem] font-semibold tracking-[-0.025em] md:text-[1.24rem]">${siteName}</span>
+          <span class="font-display text-[1.18rem] font-semibold tracking-[-0.025em] md:text-[1.24rem]">${siteName}</span>
           <span class="text-[0.88rem] text-ink/55 md:text-[0.92rem]">${siteRoleFor(site, lang)}</span>
         </a>
         <div class="hidden items-center gap-8 md:flex">
