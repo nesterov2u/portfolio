@@ -210,6 +210,12 @@ body {
 
 .case-cover-frame {
   aspect-ratio: 16 / 9;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+
+.case-cover-frame img {
+  border-radius: inherit;
 }
 
 .case-gallery-frame {
