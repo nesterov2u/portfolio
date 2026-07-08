@@ -715,7 +715,7 @@ const renderPortfolioCards = (categories, cases, ui, lang, filter) => {
           </div>
           <div class="flex flex-1 flex-col gap-3 p-5 md:p-6">
             <p class="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-ink/45">${categoryName}</p>
-            <h3 class="text-[1.32rem] font-normal tracking-[-0.025em] md:text-[1.48rem]">${title}</h3>
+            <h3 class="case-card-title text-[1.32rem] font-normal md:text-[1.48rem]">${title}</h3>
             <div class="mt-auto flex items-center justify-between pt-4">
               <span class="inline-flex items-center gap-2 text-sm font-semibold text-ink">
                 <span>${textFor(ui.labels.openCase, lang)}</span>
