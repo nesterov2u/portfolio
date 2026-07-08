@@ -230,6 +230,11 @@ body {
   letter-spacing: 0.03em;
 }
 
+.site-brand-name,
+.site-brand-role {
+  letter-spacing: 0.02em;
+}
+
 .glass-edge {
   border-color: rgb(var(--color-line) / 0.85);
   box-shadow:
