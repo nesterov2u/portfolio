@@ -81,5 +81,21 @@
       "assets/Oleo-Var-1-4 — крупный размер.jpeg"
     ],
     "order": 6
+  },
+  {
+    "id": "leaflet-perform",
+    "slug": "leaflet-perform",
+    "category": "print",
+    "title_ru": "Листовка 1C:Perform",
+    "title_en": "Leaflet 1C:Perform",
+    "summary_ru": "Разработал и сверстал многостраничную маркетинговую листовку для продукта 1C:Perform. \n\nПроект включал работу с большим объемом контента, выстраивание понятной визуальной иерархии и подготовку макета к печати. \n\nТакже обеспечил локализацию макета на пять языков, сохранив единый дизайн, читаемость и корректное отображение всех языковых версий.",
+    "summary_en": "Developed and designed a multi-page marketing leaflet for the 1C:Perform product. \n\nThe project involved working with a large amount of content, building a clear visual hierarchy, and preparing the layout for printing. \n\nAlso ensured the localization of the layout into five languages, maintaining a uniform design, readability and correct display of all language versions.",
+    "cover": "assets/Perform.png",
+    "year": "2025",
+    "gallery": [
+      "assets/GetShot — 1_1.png",
+      "assets/GetShot — 1_1-1.png"
+    ],
+    "order": 7
   }
 ]
