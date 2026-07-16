@@ -57,11 +57,12 @@
     "title_en": "1Ci CAT UI",
     "summary_ru": "Компания развивала CAT-систему для переводов, однако продукт имел устаревший и очень базовый интерфейс, построенный на стандартном Material UI.\n\nМне удалось полностью обновить пользовательский интерфейс, сделать его современным, удобным и визуально привлекательным, а также разработать лендинг продукта.\n\nЯ спроектировал новый UI на основе модифицированного Material UI, переработал ключевые экраны, улучшил визуальную систему и пользовательский опыт, а также разработал дизайн лендинга для презентации продукта.\n\nПродукт получил современный, консистентный и более удобный интерфейс, который улучшил восприятие системы пользователями и повысил качество презентации продукта за счет нового лендинга.\n",
     "summary_en": "The company was developing a CAT system for translations, but the product had an outdated and very basic interface, built on the standard Material UI.\n\nI was able to completely update the user interface, make it modern, convenient and visually attractive, and also develop a product landing page.\n\nI designed a new UI based on a modified Material UI, redesigned key screens, improved the visual system and user experience, and developed a landing page design for product presentation.\n\nThe product received a modern, consistent and more convenient interface, which improved user perception of the system and improved the quality of product presentation due to the new landing page.",
-    "cover": "assets/Slide 16_9 - 1.png",
-    "year": "2022",
+    "cover": "assets/1C-СAT-PP.png",
+    "year": "2025",
     "gallery": [
-      "assets/Frame 390.png",
-      "assets/Glossary-Open.png"
+      "assets/CAT-GetShot — 1_1-2.png",
+      "assets/CAT-GetShot — 1_1-1.png",
+      "assets/CAT-GetShot — 1_1.png"
     ],
     "order": 4
   },
