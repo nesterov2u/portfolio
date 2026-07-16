@@ -115,5 +115,21 @@
       "assets/CS4.png"
     ],
     "order": 8
+  },
+  {
+    "id": "booklet-rusta",
+    "slug": "booklet-rusta",
+    "category": "print",
+    "title_ru": "Буклет о производстве \"РУСТА\"",
+    "title_en": "Brochure about the production of \"RUSTA\"",
+    "summary_ru": "Разработал дизайн и выполнил верстку корпоративного буклета для компании РУСТА, посвященного производству аэрозольных красок. \n\nПроект включал работу с большим объемом технической информации, схем и иллюстраций, требовавших точной визуальной организации и высокой читаемости. \n\nОсновной задачей было представить сложные производственные процессы в понятной и профессиональной форме, сохранив баланс между информативностью и современным дизайном. \n\nВ результате компания получила презентационный материал, который эффективно демонстрирует производственные возможности и технологическую экспертизу.",
+    "summary_en": "Developed the design and made the layout of a corporate booklet for the RUSTA company, dedicated to the production of aerosol paints. \n\nThe project involved working with a large amount of technical information, diagrams and illustrations that required precise visual organization and high readability. \n\nThe main goal was to present complex production processes in a clear and professional manner, maintaining a balance between information content and modern design. \n\nAs a result, the company received presentation material that effectively demonstrates its production capabilities and technological expertise.",
+    "cover": "assets/rusta.png",
+    "year": "2021",
+    "gallery": [
+      "assets/Копия Mockup 3 1.png",
+      "assets/Mockup 2 1.png"
+    ],
+    "order": 9
   }
 ]
