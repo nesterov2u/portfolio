@@ -131,5 +131,26 @@
       "assets/Mockup 2 1.png"
     ],
     "order": 9
+  },
+  {
+    "id": "kudo",
+    "slug": "kudo",
+    "category": "packaging",
+    "title_ru": "Упаковка герметиков и клеёв KUDO",
+    "title_en": "Packaging of KUDO sealants and adhesives",
+    "summary_ru": "Разработал концепцию дизайна и в дальнейшем полностью оформил большую линейку герметиков и клеев KUDO. \n\nОсновной задачей было создать гибкую систему упаковки, способную масштабироваться на десятки продуктов без потери узнаваемости бренда. \n\nДля каждой позиции были разработаны уникальные иллюстрации и наборы иконок, отражающие назначение продукта. \n\nДизайн строился с учетом глубокой серийности и вариативности, что позволило легко расширять ассортимент, сохраняя единый визуальный стиль и понятную навигацию для покупателей.",
+    "summary_en": "Developed the design concept and subsequently fully designed a large line of KUDO sealants and adhesives. \n\nThe main goal was to create a flexible packaging system that could scale across dozens of products without losing brand recognition. \n\nFor each position, unique illustrations and icon sets were developed to reflect the purpose of the product. \n\nThe design was built taking into account deep serialization and variability, which made it possible to easily expand the range while maintaining a single visual style and clear navigation for customers.",
+    "cover": "assets/89805244_108785303927842_6826794937597206703_n 1-1.png",
+    "year": "2021",
+    "gallery": [
+      "assets/74473205_144981573458445_4503012191661074987_n-2.jpg",
+      "assets/81051117_529520381245159_7201576935637984407_n-1.jpg",
+      "assets/72785461_445696876346344_3079631363159822294_n.jpg",
+      "assets/82474597_526817674899475_199714239727915501_n-2.jpg",
+      "assets/84249591_522325615083429_658578373135723705_n.jpg",
+      "assets/83929756_2463599543970279_5232607070941624346_n-1.jpg"
+    ],
+    "link": "https://kudo-bond.ru",
+    "order": 10
   }
 ]
