@@ -165,6 +165,10 @@
     "summary_en": "Independently developed and implemented the English Cards mobile application for learning English. \n\nDuring my own learning, I couldn't find a word card app that fully met my functionality and design requirements, so I decided to create one myself. \n\nDesigned the user interface from scratch, thought through the user experience and implemented the application using AI-assisted development (vibe coding). \n\nAs a result, I received a fully working product, which I use myself to study English every day.",
     "cover": "assets/image 1-1.png",
     "year": "2026",
+    "gallery": [
+      "assets/GetShot — 1_11-1.png",
+      "assets/GetShot — 1_12.png"
+    ],
     "link": "https://nesterov2u.github.io/english-cards/",
     "order": 2
   }
