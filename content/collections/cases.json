@@ -122,22 +122,6 @@
     "order": 8
   },
   {
-    "id": "booklet-rusta",
-    "slug": "booklet-rusta",
-    "category": "print",
-    "title_ru": "Буклет о производстве \"РУСТА\"",
-    "title_en": "Brochure about the production of \"RUSTA\"",
-    "summary_ru": "Разработал дизайн и выполнил верстку корпоративного буклета для компании РУСТА, посвященного производству аэрозольных красок. \n\nПроект включал работу с большим объемом технической информации, схем и иллюстраций, требовавших точной визуальной организации и высокой читаемости. \n\nОсновной задачей было представить сложные производственные процессы в понятной и профессиональной форме, сохранив баланс между информативностью и современным дизайном. \n\nВ результате компания получила презентационный материал, который эффективно демонстрирует производственные возможности и технологическую экспертизу.",
-    "summary_en": "Developed the design and made the layout of a corporate booklet for the RUSTA company, dedicated to the production of aerosol paints. \n\nThe project involved working with a large amount of technical information, diagrams and illustrations that required precise visual organization and high readability. \n\nThe main goal was to present complex production processes in a clear and professional manner, maintaining a balance between information content and modern design. \n\nAs a result, the company received presentation material that effectively demonstrates its production capabilities and technological expertise.",
-    "cover": "assets/rusta.png",
-    "year": "2021",
-    "gallery": [
-      "assets/Копия Mockup 3 1.png",
-      "assets/Mockup 2 1.png"
-    ],
-    "order": 9
-  },
-  {
     "id": "kudo",
     "slug": "kudo",
     "category": "packaging",
@@ -193,5 +177,21 @@
     ],
     "link": "https://www.youtube.com/watch?v=0XolWdek0_c",
     "order": 11
+  },
+  {
+    "id": "dobble-game",
+    "slug": "dobble-game",
+    "category": "branding",
+    "title_ru": "Брендированная игра Dobble",
+    "title_en": "Branded game Dobble",
+    "summary_ru": "Разработал концепцию и дизайн брендированной версии игры Dobble, включающей более 50 оригинальных иллюстраций, основанных на визуальных образах и продуктах бренда. \n\nРуководил созданием иллюстраций совместно с junior-дизайнером: определил стилистику, ставил задачи и контролировал визуальную целостность материалов. \n\nВ результате получился полноценный игровой продукт с единым фирменным стилем, подходящий для корпоративных мероприятий и продвижения бренда.",
+    "summary_en": "Developed the concept and design of a branded version of the Dobble game, including more than 50 original illustrations based on visual images and brand products. \n\nManaged the creation of illustrations together with a junior designer: determined the style, set tasks and controlled the visual integrity of the materials. \n\nThe result is a full-fledged gaming product with a single corporate identity, suitable for corporate events and brand promotion.",
+    "cover": "assets/1Ci-Box-Mockup.png",
+    "gallery": [
+      "assets/05-1Ci-Dobble-Mockup-01.png",
+      "assets/05-1Ci-Dobble-Mockup-02.png",
+      "assets/05-1Ci-Dobble-Mockup-03.png"
+    ],
+    "order": 12
   }
 ]
