@@ -172,5 +172,24 @@
       "assets/GetShot — 3-1.png"
     ],
     "order": 2
+  },
+  {
+    "id": "video-drive",
+    "slug": "video-drive",
+    "category": "motion",
+    "title_ru": "Анимационный ролик 1C:Drive",
+    "title_en": "1C:Drive Motion Video",
+    "summary_ru": "Смонтировал анимационный рекламный ролик для ERP-системы 1C:Drive на основе готового сценария. \n\nРазработал визуальную подачу, анимацию графики и переходы, выстроил ритм повествования и синхронизировал движение с текстом и звуковым сопровождением. \n\nВ результате получился цельный motion-ролик, который наглядно презентует возможности продукта и подходит для использования в рекламных и маркетинговых каналах.",
+    "summary_en": "Edited an animated commercial for the 1C:Drive ERP system based on a ready-made script. \n\nDeveloped visual presentation, graphics animation and transitions, built the rhythm of the narrative and synchronized movement with text and sound. \n\nThe result is a solid motion video that clearly demonstrates the capabilities of the product and is suitable for use in advertising and marketing channels.",
+    "cover": "assets/51-Drive-Promo-Video-Animation-EN.png",
+    "year": "2025",
+    "gallery": [
+      "assets/Drive-1.png",
+      "assets/Drive-2.png",
+      "assets/Drive-3.png",
+      "assets/Drive-4.png"
+    ],
+    "link": "https://www.youtube.com/watch?v=0XolWdek0_c",
+    "order": 11
   }
 ]
