@@ -1,5 +1,9 @@
 .DS_Store
 .playwright-mcp/
+_site/
+/*.png
+/favicon/
+/assets/*крупный размер*.jpeg
 *-check.png
 *-checked.png
 *-verified.png

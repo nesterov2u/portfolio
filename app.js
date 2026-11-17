@@ -457,7 +457,7 @@ const createSectionIntro = (title, intro) => `
 
 const portfolioChipClass = (active = false) =>
   active
-    ? "filter-chip rounded-full border border-accent/18 bg-accent/10 px-5 py-3 text-base font-medium text-ink shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_10px_24px_rgba(20,216,255,0.08)]"
+    ? "filter-chip rounded-full border border-accent/18 bg-accent/10 px-5 py-3 text-base font-medium text-ink"
     : "filter-chip glass-edge rounded-full border bg-panel/88 px-5 py-3 text-base font-medium text-ink/66 hover:bg-panel hover:text-ink";
 
 const renderHeader = (site, navigation, ui, lang) => {
@@ -551,7 +551,7 @@ const renderHero = (home, ui, lang) => `
             <p class="mb-4 text-[0.68rem] font-medium uppercase tracking-[0.16em] text-ink/55 sm:mb-5 sm:text-[0.72rem] sm:tracking-[0.18em]">
               ${textFor(home.hero.eyebrow, lang)}
             </p>
-            <h1 class="max-w-4xl font-display text-[2.55rem] leading-[0.9] tracking-[-0.055em] text-ink sm:text-[4.2rem] lg:text-[4.7rem]">
+            <h1 class="hero-title max-w-4xl font-display text-[2.55rem] text-ink sm:text-[4.2rem] lg:text-[4.7rem]">
               ${textFor(home.hero.title, lang)}
             </h1>
           </div>
@@ -579,7 +579,7 @@ const renderHero = (home, ui, lang) => `
           </div>
         </div>
         <div class="hero-visual-wrap relative lg:pt-1">
-          <div class="hero-visual-float accent-mix-ring relative z-[1] overflow-hidden rounded-[2rem] border border-white/60 bg-white p-3 shadow-glow">
+          <div class="hero-visual-float accent-mix-ring relative z-[1] overflow-hidden rounded-[2rem] border border-white/60 bg-white p-3">
             ${renderImage({
               src: home.hero.visual,
               alt: "",
